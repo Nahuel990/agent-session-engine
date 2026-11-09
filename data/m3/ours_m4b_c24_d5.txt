@@ -1,0 +1,428 @@
+15:41:26 c8931cfd turn 0 prompt 6661 cached 0 37.8s
+15:41:26 7ecb6e41 turn 0 prompt 6735 cached 0 37.8s
+15:41:27 43557dc7 turn 0 prompt 6898 cached 0 38.0s
+15:41:27 0a459d35 turn 0 prompt 6673 cached 0 38.1s
+15:41:27 9b59808a turn 0 prompt 7416 cached 0 38.2s
+15:41:27 8a60a347 turn 0 prompt 6929 cached 0 38.2s
+15:41:27 c081b264 turn 0 prompt 6901 cached 0 38.3s
+15:41:27 ac391b7a turn 0 prompt 6733 cached 0 38.5s
+15:41:27 5f5a0316 turn 0 prompt 10834 cached 0 38.6s
+15:41:27 8985b69a turn 0 prompt 6714 cached 0 38.6s
+15:41:27 021b1eaf turn 0 prompt 8032 cached 0 38.7s
+15:41:27 4ad5298d turn 0 prompt 6644 cached 0 38.8s
+15:41:27 d021a693 turn 0 prompt 7293 cached 0 38.9s
+15:41:27 ee94bf79 turn 0 prompt 7838 cached 0 38.9s
+15:41:27 a5a58471 turn 0 prompt 6737 cached 0 39.0s
+15:41:28 02f88761 turn 0 prompt 6670 cached 0 39.1s
+15:41:28 b37bdd9e turn 0 prompt 6679 cached 0 39.1s
+15:41:28 388aa92e turn 0 prompt 7448 cached 0 39.2s
+15:41:28 4ef07c28 turn 0 prompt 7248 cached 0 39.2s
+15:41:28 0ba0d3e5 turn 0 prompt 6689 cached 0 39.3s
+15:41:41 f3911fb2 turn 0 prompt 6764 cached 0 52.8s
+15:41:49 7ecb6e41 turn 1 prompt 7005 cached 6735 17.3s
+15:41:49 c8931cfd turn 1 prompt 7450 cached 6661 17.4s
+15:41:49 43557dc7 turn 1 prompt 7287 cached 6898 17.1s
+15:41:49 0a459d35 turn 1 prompt 7036 cached 6673 17.2s
+15:41:49 9b59808a turn 1 prompt 7849 cached 7416 17.2s
+15:41:49 8a60a347 turn 1 prompt 7246 cached 6929 17.2s
+15:41:49 c081b264 turn 1 prompt 7359 cached 6901 17.2s
+15:41:49 ac391b7a turn 1 prompt 7212 cached 6733 17.3s
+15:41:49 5f5a0316 turn 1 prompt 11323 cached 10834 17.2s
+15:41:49 8985b69a turn 1 prompt 7061 cached 6714 17.2s
+15:41:49 021b1eaf turn 1 prompt 8500 cached 8032 17.1s
+15:41:49 4ad5298d turn 1 prompt 7003 cached 6644 17.0s
+15:41:49 d021a693 turn 1 prompt 7829 cached 7293 17.0s
+15:41:50 ee94bf79 turn 1 prompt 8243 cached 7838 17.1s
+15:41:50 02f88761 turn 1 prompt 7015 cached 6670 17.1s
+15:41:50 a5a58471 turn 1 prompt 7079 cached 6737 17.1s
+15:41:50 b37bdd9e turn 1 prompt 6990 cached 6679 17.1s
+15:41:50 4ef07c28 turn 1 prompt 7720 cached 7248 17.0s
+15:41:50 388aa92e turn 1 prompt 7795 cached 7448 17.0s
+15:41:50 0ba0d3e5 turn 1 prompt 7277 cached 6689 16.9s
+15:41:59 f3911fb2 turn 1 prompt 7173 cached 6764 12.5s
+15:42:12 7ecb6e41 turn 2 prompt 7618 cached 7005 18.5s
+15:42:12 c8931cfd turn 2 prompt 8959 cached 7450 18.5s
+15:42:12 43557dc7 turn 2 prompt 7948 cached 7287 18.5s
+15:42:12 0a459d35 turn 2 prompt 8712 cached 7036 18.5s
+15:42:12 9b59808a turn 2 prompt 8223 cached 7849 18.4s
+15:42:12 c081b264 turn 2 prompt 7644 cached 7359 18.3s
+15:42:12 8a60a347 turn 2 prompt 7744 cached 7246 18.4s
+15:42:12 4ad5298d turn 2 prompt 7310 cached 7003 18.0s
+15:42:12 ac391b7a turn 2 prompt 7426 cached 7212 18.2s
+15:42:12 5f5a0316 turn 2 prompt 12058 cached 11323 18.1s
+15:42:12 021b1eaf turn 2 prompt 9156 cached 8500 18.1s
+15:42:12 d021a693 turn 2 prompt 8079 cached 7829 18.0s
+15:42:13 02f88761 turn 2 prompt 7387 cached 7015 17.9s
+15:42:13 a5a58471 turn 2 prompt 7453 cached 7079 17.9s
+15:42:13 ee94bf79 turn 2 prompt 8912 cached 8243 18.0s
+15:42:13 b37bdd9e turn 2 prompt 7576 cached 6990 18.0s
+15:42:13 388aa92e turn 2 prompt 8774 cached 7795 18.0s
+15:42:19 0ba0d3e5 turn 2 prompt 9513 cached 7277 24.4s
+15:42:19 8985b69a turn 2 prompt 12119 cached 7061 24.9s
+15:42:36 7ecb6e41 turn 3 prompt 8684 cached 7618 18.5s
+15:42:36 c8931cfd turn 3 prompt 9385 cached 8959 18.5s
+15:42:36 0a459d35 turn 3 prompt 9836 cached 8712 18.5s
+15:42:36 43557dc7 turn 3 prompt 10045 cached 7948 18.5s
+15:42:36 d021a693 turn 3 prompt 8640 cached 8079 18.4s
+15:42:36 9b59808a turn 3 prompt 10132 cached 8223 18.6s
+15:42:36 c081b264 turn 3 prompt 7762 cached 7644 18.5s
+15:42:36 4ad5298d turn 3 prompt 8050 cached 7310 18.5s
+15:42:36 8a60a347 turn 3 prompt 7876 cached 7744 18.5s
+15:42:36 5f5a0316 turn 3 prompt 12185 cached 11456 18.4s
+15:42:36 021b1eaf turn 3 prompt 9280 cached 9156 18.4s
+15:42:36 ac391b7a turn 3 prompt 8005 cached 7426 18.5s
+15:42:36 a5a58471 turn 3 prompt 8097 cached 7453 18.3s
+15:42:36 b37bdd9e turn 3 prompt 8609 cached 7576 18.1s
+15:42:36 ee94bf79 turn 3 prompt 9027 cached 7744 18.3s
+15:42:36 02f88761 turn 3 prompt 8163 cached 7387 18.3s
+15:42:39 0ba0d3e5 turn 3 prompt 10731 cached 9513 14.8s
+15:42:39 8985b69a turn 3 prompt 13428 cached 12119 14.9s
+15:42:59 388aa92e turn 3 prompt 8895 cached 0 40.9s
+15:43:00 c8931cfd turn 4 prompt 9495 cached 9385 19.7s
+15:43:01 43557dc7 turn 4 prompt 10541 cached 10045 19.9s
+15:43:01 8a60a347 turn 4 prompt 8007 cached 7876 19.8s
+15:43:01 0a459d35 turn 4 prompt 10777 cached 9836 20.0s
+15:43:01 9b59808a turn 4 prompt 10253 cached 10132 19.9s
+15:43:01 4ad5298d turn 4 prompt 8300 cached 8050 19.9s
+15:43:01 c081b264 turn 4 prompt 8490 cached 7762 19.9s
+15:43:01 021b1eaf turn 4 prompt 10284 cached 9280 19.9s
+15:43:01 a5a58471 turn 4 prompt 8413 cached 8097 19.9s
+15:43:01 ee94bf79 turn 4 prompt 10055 cached 9027 19.9s
+15:43:01 5f5a0316 turn 4 prompt 13407 cached 12185 19.9s
+15:43:04 b37bdd9e turn 4 prompt 10107 cached 8609 23.3s
+15:43:04 7ecb6e41 turn 4 prompt 9808 cached 128 23.5s
+15:43:04 ac391b7a turn 4 prompt 8683 cached 6528 23.4s
+15:43:04 02f88761 turn 4 prompt 15226 cached 5888 23.4s
+15:43:19 388aa92e turn 4 prompt 10078 cached 8895 15.4s
+15:43:23 c8931cfd turn 5 prompt 9614 cached 9495 17.2s
+15:43:23 8a60a347 turn 5 prompt 8125 cached 8007 17.4s
+15:43:23 43557dc7 turn 5 prompt 10756 cached 10541 17.4s
+15:43:23 c081b264 turn 5 prompt 8639 cached 8490 17.4s
+15:43:23 a5a58471 turn 5 prompt 8640 cached 8413 17.4s
+15:43:23 4ad5298d turn 5 prompt 8854 cached 8300 17.4s
+15:43:23 021b1eaf turn 5 prompt 10510 cached 10284 17.5s
+15:43:23 0a459d35 turn 5 prompt 11161 cached 10777 17.5s
+15:43:23 9b59808a turn 5 prompt 11282 cached 10253 17.5s
+15:43:23 5f5a0316 turn 5 prompt 13530 cached 13407 17.6s
+15:43:23 ee94bf79 turn 5 prompt 12028 cached 10055 17.7s
+15:43:26 7ecb6e41 turn 5 prompt 10065 cached 9808 16.4s
+15:43:26 ac391b7a turn 5 prompt 8833 cached 8683 16.4s
+15:43:26 b37bdd9e turn 5 prompt 10852 cached 10107 16.4s
+15:43:26 02f88761 turn 5 prompt 15901 cached 15226 16.4s
+15:43:37 388aa92e turn 5 prompt 10203 cached 10078 13.1s
+15:43:45 c8931cfd turn 6 prompt 9730 cached 9614 17.5s
+15:43:45 43557dc7 turn 6 prompt 10909 cached 10756 17.1s
+15:43:45 4ad5298d turn 6 prompt 9003 cached 8854 17.2s
+15:43:45 a5a58471 turn 6 prompt 8931 cached 8640 17.2s
+15:43:45 8a60a347 turn 6 prompt 9129 cached 8125 17.4s
+15:43:45 c081b264 turn 6 prompt 9636 cached 8639 17.3s
+15:43:45 021b1eaf turn 6 prompt 10815 cached 10510 17.2s
+15:43:45 5f5a0316 turn 6 prompt 13666 cached 13530 17.1s
+15:43:45 9b59808a turn 6 prompt 11398 cached 11282 17.2s
+15:43:48 ee94bf79 turn 6 prompt 12560 cached 12028 19.2s
+15:43:48 ac391b7a turn 6 prompt 9364 cached 8833 17.0s
+15:43:48 7ecb6e41 turn 6 prompt 11715 cached 10065 17.4s
+15:43:48 0a459d35 turn 6 prompt 12167 cached 9984 19.7s
+15:43:48 02f88761 turn 6 prompt 16032 cached 15168 17.3s
+15:43:55 388aa92e turn 6 prompt 10623 cached 10203 12.9s
+15:44:06 c8931cfd turn 7 prompt 9947 cached 9730 16.4s
+15:44:07 43557dc7 turn 7 prompt 11666 cached 10909 16.4s
+15:44:07 8a60a347 turn 7 prompt 9267 cached 9129 16.4s
+15:44:07 a5a58471 turn 7 prompt 9128 cached 8931 16.4s
+15:44:07 c081b264 turn 7 prompt 9771 cached 9636 16.5s
+15:44:07 4ad5298d turn 7 prompt 10845 cached 9003 16.5s
+15:44:07 9b59808a turn 7 prompt 11540 cached 11398 16.5s
+15:44:07 021b1eaf turn 7 prompt 10956 cached 10815 16.5s
+15:44:07 5f5a0316 turn 7 prompt 13862 cached 13666 16.5s
+15:44:08 ee94bf79 turn 7 prompt 12693 cached 12560 15.9s
+15:44:09 ac391b7a turn 7 prompt 9519 cached 9364 16.2s
+15:44:09 0a459d35 turn 7 prompt 12294 cached 12167 16.0s
+15:44:09 7ecb6e41 turn 7 prompt 12056 cached 11715 16.0s
+15:44:14 388aa92e turn 7 prompt 11008 cached 10623 14.0s
+15:44:29 c8931cfd turn 8 prompt 10071 cached 9947 17.3s
+15:44:29 43557dc7 turn 8 prompt 12283 cached 11666 17.4s
+15:44:29 a5a58471 turn 8 prompt 9329 cached 9128 17.5s
+15:44:29 8a60a347 turn 8 prompt 9508 cached 9267 17.5s
+15:44:29 c081b264 turn 8 prompt 11119 cached 9771 17.5s
+15:44:29 4ad5298d turn 8 prompt 11042 cached 10845 17.5s
+15:44:29 9b59808a turn 8 prompt 12497 cached 11540 17.5s
+15:44:30 021b1eaf turn 8 prompt 15085 cached 10956 17.6s
+15:44:30 5f5a0316 turn 8 prompt 14455 cached 13862 17.6s
+15:44:30 ee94bf79 turn 8 prompt 13125 cached 12693 16.8s
+15:44:30 ac391b7a turn 8 prompt 10113 cached 9519 16.6s
+15:44:31 0a459d35 turn 8 prompt 12679 cached 12294 16.7s
+15:44:31 7ecb6e41 turn 8 prompt 12193 cached 12056 17.1s
+15:44:33 388aa92e turn 8 prompt 12269 cached 11008 14.0s
+15:44:45 02f88761 turn 7 prompt 16304 cached 0 52.0s
+15:44:52 43557dc7 turn 9 prompt 12539 cached 9920 18.4s
+15:44:52 a5a58471 turn 9 prompt 9560 cached 9329 18.1s
+15:44:52 5f5a0316 turn 9 prompt 15933 cached 14455 17.9s
+15:44:52 c081b264 turn 9 prompt 11572 cached 11119 18.1s
+15:44:52 8a60a347 turn 9 prompt 11169 cached 9508 18.2s
+15:44:52 021b1eaf turn 9 prompt 15229 cached 15085 17.9s
+15:44:52 9b59808a turn 9 prompt 12626 cached 12497 18.0s
+15:44:53 0a459d35 turn 9 prompt 12942 cached 12679 17.3s
+15:44:55 4ad5298d turn 9 prompt 14290 cached 7104 20.7s
+15:44:55 ee94bf79 turn 9 prompt 13279 cached 12480 19.7s
+15:44:55 ac391b7a turn 9 prompt 11863 cached 10113 19.6s
+15:45:03 02f88761 turn 8 prompt 16550 cached 16304 13.1s
+15:45:14 a5a58471 turn 10 prompt 10672 cached 9560 16.7s
+15:45:14 43557dc7 turn 10 prompt 12906 cached 12539 16.7s
+15:45:14 8a60a347 turn 10 prompt 12509 cached 11169 16.7s
+15:45:14 021b1eaf turn 10 prompt 15539 cached 15229 16.7s
+15:45:14 c081b264 turn 10 prompt 11993 cached 11572 16.7s
+15:45:14 5f5a0316 turn 10 prompt 16498 cached 15933 16.8s
+15:45:14 9b59808a turn 10 prompt 13418 cached 12626 16.8s
+15:45:15 0a459d35 turn 10 prompt 13084 cached 12942 16.7s
+15:45:16 ac391b7a turn 10 prompt 12218 cached 11863 16.2s
+15:45:16 4ad5298d turn 10 prompt 14471 cached 14290 16.3s
+15:45:16 ee94bf79 turn 10 prompt 14502 cached 13279 16.3s
+15:45:21 02f88761 turn 9 prompt 17038 cached 16550 12.8s
+15:45:35 a5a58471 turn 11 prompt 10863 cached 10672 15.9s
+15:45:35 43557dc7 turn 11 prompt 13248 cached 12906 15.9s
+15:45:35 c081b264 turn 11 prompt 12430 cached 11993 15.9s
+15:45:35 9b59808a turn 11 prompt 13917 cached 13418 15.9s
+15:45:35 5f5a0316 turn 11 prompt 16738 cached 16498 15.9s
+15:45:35 021b1eaf turn 11 prompt 16282 cached 15539 16.0s
+15:45:35 8a60a347 turn 11 prompt 12629 cached 12509 16.0s
+15:45:36 0a459d35 turn 11 prompt 13271 cached 13084 16.0s
+15:45:37 4ad5298d turn 11 prompt 14852 cached 14471 15.6s
+15:45:37 ac391b7a turn 11 prompt 12666 cached 12218 15.7s
+15:45:39 02f88761 turn 10 prompt 17645 cached 17038 13.3s
+15:45:55 ee94bf79 turn 11 prompt 20523 cached 14502 33.9s
+15:45:56 43557dc7 turn 12 prompt 13367 cached 13248 15.5s
+15:45:56 c081b264 turn 12 prompt 12846 cached 12430 15.5s
+15:45:56 8a60a347 turn 12 prompt 12789 cached 12629 15.5s
+15:45:56 9b59808a turn 12 prompt 14381 cached 13917 15.7s
+15:45:56 021b1eaf turn 12 prompt 16703 cached 16282 15.6s
+15:46:03 ac391b7a turn 12 prompt 12984 cached 12666 20.8s
+15:46:03 02f88761 turn 11 prompt 17796 cached 17645 18.6s
+15:46:03 0a459d35 turn 12 prompt 13611 cached 13271 22.1s
+15:46:03 a5a58471 turn 12 prompt 10974 cached 6080 22.8s
+15:46:03 4ad5298d turn 12 prompt 15212 cached 14852 20.9s
+15:46:16 ee94bf79 turn 12 prompt 20636 cached 20523 15.8s
+15:46:16 43557dc7 turn 13 prompt 14608 cached 13367 15.8s
+15:46:17 c081b264 turn 13 prompt 13576 cached 12846 16.0s
+15:46:17 8a60a347 turn 13 prompt 12971 cached 12789 16.0s
+15:46:17 9b59808a turn 13 prompt 16110 cached 14381 16.0s
+15:46:17 021b1eaf turn 13 prompt 18262 cached 16703 16.0s
+15:46:23 a5a58471 turn 13 prompt 11481 cached 10974 15.2s
+15:46:23 02f88761 turn 12 prompt 18231 cached 17796 15.2s
+15:46:23 ac391b7a turn 13 prompt 13147 cached 12984 15.3s
+15:46:23 0a459d35 turn 13 prompt 13813 cached 13611 15.3s
+15:46:23 4ad5298d turn 13 prompt 15344 cached 15212 15.3s
+15:46:36 ee94bf79 turn 13 prompt 21039 cached 20636 14.7s
+15:46:36 43557dc7 turn 14 prompt 15501 cached 14608 14.8s
+15:46:37 8a60a347 turn 14 prompt 14335 cached 12971 15.2s
+15:46:37 021b1eaf turn 14 prompt 18444 cached 18262 15.3s
+15:46:44 a5a58471 turn 14 prompt 11602 cached 11481 15.8s
+15:46:45 02f88761 turn 13 prompt 18407 cached 18231 16.5s
+15:46:45 0a459d35 turn 14 prompt 14051 cached 13813 16.4s
+15:46:49 9b59808a turn 14 prompt 16788 cached 16110 27.1s
+15:46:49 c081b264 turn 14 prompt 20127 cached 13576 27.3s
+15:46:49 ac391b7a turn 14 prompt 14526 cached 13147 20.9s
+15:46:56 ee94bf79 turn 14 prompt 21563 cached 21039 15.3s
+15:46:56 43557dc7 turn 15 prompt 16441 cached 15501 15.3s
+15:46:57 8a60a347 turn 15 prompt 14456 cached 14335 15.2s
+15:46:57 021b1eaf turn 15 prompt 19585 cached 18444 15.1s
+15:47:03 a5a58471 turn 15 prompt 11730 cached 11602 13.9s
+15:47:03 02f88761 turn 14 prompt 18602 cached 18407 13.8s
+15:47:09 c081b264 turn 15 prompt 21371 cached 20127 14.6s
+15:47:09 9b59808a turn 15 prompt 17431 cached 16788 14.7s
+15:47:09 ac391b7a turn 15 prompt 15200 cached 14526 14.6s
+15:47:16 ee94bf79 turn 15 prompt 21701 cached 21563 14.7s
+15:47:16 43557dc7 turn 16 prompt 16835 cached 16441 14.5s
+15:47:17 8a60a347 turn 16 prompt 14820 cached 14456 14.6s
+15:47:17 021b1eaf turn 16 prompt 19806 cached 19585 14.6s
+15:47:30 c081b264 turn 16 prompt 21524 cached 21371 16.1s
+15:47:30 a5a58471 turn 16 prompt 11900 cached 11712 21.9s
+15:47:30 02f88761 turn 15 prompt 18915 cached 18602 21.3s
+15:47:30 ac391b7a turn 16 prompt 15448 cached 15200 16.0s
+15:47:30 0a459d35 turn 15 prompt 19372 cached 14051 40.2s
+15:47:36 ee94bf79 turn 16 prompt 21903 cached 21701 14.9s
+15:47:36 43557dc7 turn 17 prompt 17191 cached 16835 15.1s
+15:47:37 8a60a347 turn 17 prompt 14982 cached 14820 15.2s
+15:47:37 021b1eaf turn 17 prompt 19955 cached 19806 15.2s
+15:47:50 c081b264 turn 17 prompt 22439 cached 21524 15.8s
+15:47:51 ac391b7a turn 17 prompt 17050 cached 15448 16.1s
+15:47:51 a5a58471 turn 17 prompt 12934 cached 11900 16.1s
+15:47:51 0a459d35 turn 16 prompt 20275 cached 19372 16.0s
+15:47:51 02f88761 turn 16 prompt 19152 cached 18915 16.1s
+15:47:56 ee94bf79 turn 17 prompt 22068 cached 21903 15.0s
+15:47:56 43557dc7 turn 18 prompt 17628 cached 17191 15.2s
+15:47:57 8a60a347 turn 18 prompt 15428 cached 14982 15.4s
+15:47:57 021b1eaf turn 18 prompt 20677 cached 19955 15.4s
+15:48:11 c081b264 turn 18 prompt 24304 cached 22439 15.4s
+15:48:11 ac391b7a turn 18 prompt 17207 cached 17050 15.2s
+15:48:11 a5a58471 turn 18 prompt 13067 cached 12934 15.5s
+15:48:11 02f88761 turn 17 prompt 19460 cached 19152 15.5s
+15:48:11 0a459d35 turn 17 prompt 20454 cached 20275 15.5s
+15:48:15 ee94bf79 turn 18 prompt 22257 cached 22068 14.5s
+15:48:16 43557dc7 turn 19 prompt 17931 cached 17628 14.3s
+15:48:16 8a60a347 turn 19 prompt 15855 cached 15428 14.2s
+15:48:31 c081b264 turn 19 prompt 25406 cached 24304 15.3s
+15:48:31 ac391b7a turn 19 prompt 17401 cached 17207 15.3s
+15:48:31 a5a58471 turn 19 prompt 13209 cached 13067 15.1s
+15:48:32 0a459d35 turn 18 prompt 21277 cached 20454 15.7s
+15:48:32 02f88761 turn 18 prompt 19769 cached 19460 15.7s
+15:48:35 ee94bf79 turn 19 prompt 22632 cached 22257 15.0s
+15:48:35 43557dc7 turn 20 prompt 19135 cached 17931 14.7s
+15:48:36 8a60a347 turn 20 prompt 16214 cached 15855 14.3s
+15:48:53 021b1eaf turn 19 prompt 21047 cached 0 50.7s
+15:48:57 02f88761 turn 19 prompt 20150 cached 14336 20.5s
+15:48:57 ac391b7a turn 20 prompt 18010 cached 17401 21.2s
+15:48:57 c081b264 turn 20 prompt 25535 cached 20480 21.3s
+15:48:57 a5a58471 turn 20 prompt 13723 cached 13209 21.2s
+15:48:57 0a459d35 turn 19 prompt 22596 cached 21277 20.5s
+15:49:00 ee94bf79 turn 20 prompt 23938 cached 15872 20.2s
+15:49:00 43557dc7 turn 21 prompt 19733 cached 19135 20.0s
+15:49:11 021b1eaf turn 20 prompt 22526 cached 21047 12.9s
+15:49:19 ac391b7a turn 21 prompt 18462 cached 18010 16.2s
+15:49:19 02f88761 turn 20 prompt 20521 cached 20150 16.2s
+15:49:19 a5a58471 turn 21 prompt 14277 cached 13723 16.5s
+15:49:19 0a459d35 turn 20 prompt 22820 cached 22596 16.6s
+15:49:19 c081b264 turn 21 prompt 25661 cached 25535 16.6s
+15:49:21 ee94bf79 turn 21 prompt 24121 cached 23938 15.9s
+15:49:21 43557dc7 turn 22 prompt 20072 cached 19733 15.8s
+15:49:29 021b1eaf turn 21 prompt 22673 cached 22526 12.9s
+15:49:39 02f88761 turn 21 prompt 20662 cached 20521 15.8s
+15:49:39 ac391b7a turn 22 prompt 18964 cached 18462 15.8s
+15:49:39 a5a58471 turn 22 prompt 14495 cached 14277 15.5s
+15:49:40 0a459d35 turn 21 prompt 23179 cached 22820 16.0s
+15:49:40 c081b264 turn 22 prompt 27608 cached 25661 16.1s
+15:49:48 021b1eaf turn 22 prompt 23174 cached 22464 13.9s
+15:49:48 43557dc7 turn 23 prompt 20457 cached 20072 21.6s
+15:49:59 02f88761 turn 22 prompt 20920 cached 20662 15.1s
+15:50:00 a5a58471 turn 23 prompt 14763 cached 14495 15.5s
+15:50:00 ac391b7a turn 23 prompt 19405 cached 18964 15.7s
+15:50:01 0a459d35 turn 22 prompt 23302 cached 23179 15.5s
+15:50:01 c081b264 turn 23 prompt 29211 cached 27608 15.6s
+15:50:06 43557dc7 turn 24 prompt 20742 cached 20457 13.4s
+15:50:06 021b1eaf turn 23 prompt 24014 cached 23174 13.4s
+15:50:20 02f88761 turn 23 prompt 21254 cached 20920 15.2s
+15:50:21 a5a58471 turn 24 prompt 15005 cached 14763 15.8s
+15:50:21 ac391b7a turn 24 prompt 19757 cached 19405 15.9s
+15:50:21 0a459d35 turn 23 prompt 23787 cached 23302 15.8s
+15:50:21 c081b264 turn 24 prompt 31136 cached 29211 15.8s
+15:50:25 43557dc7 turn 25 prompt 21260 cached 20742 14.2s
+15:50:25 021b1eaf turn 24 prompt 24327 cached 24014 14.2s
+15:50:38 02f88761 turn 24 prompt 21581 cached 21254 12.9s
+15:50:39 a5a58471 turn 25 prompt 15582 cached 15005 13.2s
+15:50:39 ac391b7a turn 25 prompt 20046 cached 19757 13.3s
+15:50:40 0a459d35 turn 24 prompt 24065 cached 23787 13.7s
+15:50:43 021b1eaf turn 25 prompt 24458 cached 24327 13.1s
+15:50:43 43557dc7 turn 26 prompt 21480 cached 21260 13.1s
+15:50:55 02f88761 turn 25 prompt 21867 cached 21581 12.6s
+15:50:57 a5a58471 turn 26 prompt 15831 cached 15582 13.1s
+15:50:58 ac391b7a turn 26 prompt 20313 cached 20046 13.2s
+15:50:59 0a459d35 turn 25 prompt 24348 cached 24065 13.7s
+15:51:02 43557dc7 turn 27 prompt 21773 cached 21480 13.3s
+15:51:02 021b1eaf turn 26 prompt 24597 cached 24458 13.4s
+15:51:14 02f88761 turn 26 prompt 22223 cached 21867 13.7s
+15:51:16 a5a58471 turn 27 prompt 16023 cached 15831 14.3s
+15:51:17 ac391b7a turn 27 prompt 20816 cached 20313 14.5s
+15:51:19 0a459d35 turn 26 prompt 29546 cached 24348 15.2s
+15:51:21 43557dc7 turn 28 prompt 22426 cached 21773 13.8s
+15:51:21 021b1eaf turn 27 prompt 24873 cached 24597 13.9s
+15:51:32 02f88761 turn 27 prompt 22438 cached 22223 12.8s
+15:51:35 a5a58471 turn 28 prompt 16240 cached 16023 13.3s
+15:51:36 ac391b7a turn 28 prompt 21306 cached 20816 14.4s
+15:51:39 0a459d35 turn 27 prompt 30081 cached 29546 14.8s
+15:51:40 43557dc7 turn 29 prompt 23253 cached 22426 14.2s
+15:51:40 021b1eaf turn 28 prompt 25231 cached 24873 14.1s
+15:51:49 02f88761 turn 28 prompt 22655 cached 22438 12.1s
+15:51:52 a5a58471 turn 29 prompt 16715 cached 16240 12.4s
+15:51:54 ac391b7a turn 29 prompt 21938 cached 21306 12.2s
+15:51:57 43557dc7 turn 30 prompt 23579 cached 23253 12.6s
+15:51:57 021b1eaf turn 29 prompt 25525 cached 25231 12.7s
+15:52:05 02f88761 turn 29 prompt 22861 cached 22655 11.4s
+15:52:12 a5a58471 turn 30 prompt 16863 cached 16715 15.4s
+15:52:15 ac391b7a turn 30 prompt 22164 cached 21938 16.0s
+15:52:18 ee94bf79 turn 22 prompt 24564 cached 0 172.1s
+15:52:19 43557dc7 turn 31 prompt 24193 cached 23579 17.0s
+15:52:20 021b1eaf turn 30 prompt 26323 cached 25525 17.1s
+15:52:24 02f88761 turn 30 prompt 23655 cached 22861 14.1s
+15:52:31 a5a58471 turn 31 prompt 17014 cached 16863 13.4s
+15:52:33 ac391b7a turn 31 prompt 23084 cached 22164 13.4s
+15:52:37 ee94bf79 turn 23 prompt 24949 cached 24564 14.0s
+15:52:38 43557dc7 turn 32 prompt 25059 cached 24193 14.0s
+15:52:39 021b1eaf turn 31 prompt 27062 cached 26323 14.3s
+Traceback (most recent call last):
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/miniforge3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/nnucera/Documents/article/engine/phase0/replay.py", line 102, in <module>
+    asyncio.run(main())
+  File "/Users/nnucera/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/engine/phase0/replay.py", line 87, in main
+    await asyncio.gather(*(run_session(client, s, rows) for s in sessions))
+  File "/Users/nnucera/Documents/article/engine/phase0/replay.py", line 49, in run_session
+    async with client.stream("POST", f"{BASE_URL}/v1/chat/completions", json=body) as r:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/miniforge3/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1583, in stream
+    response = await self.send(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nnucera/miniforge3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/nnucera/Documents/article/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError

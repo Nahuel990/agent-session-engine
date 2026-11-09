@@ -1,0 +1,3 @@
+core/target/
+data/trajectories.parquet
+__pycache__/

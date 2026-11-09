@@ -1,0 +1,3 @@
+{"concurrency": 1, "out_tokens_each": 256, "wall_s": 5.578, "output_tok_per_s": 45.9, "ms_per_token_per_request": 21.79}
+{"concurrency": 8, "out_tokens_each": 256, "wall_s": 6.016, "output_tok_per_s": 340.5, "ms_per_token_per_request": 23.5}
+{"concurrency": 24, "out_tokens_each": 256, "wall_s": 6.289, "output_tok_per_s": 977.0, "ms_per_token_per_request": 24.57}

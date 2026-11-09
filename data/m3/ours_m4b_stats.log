@@ -1,0 +1,25 @@
+15:40:52 {"active":1,"free_blocks":2706,"idle_sessions":0,"preemptions":0,"resident":1,"steps":1,"total_blocks":2706,"waiting":0}
+15:41:23 {"active":20,"free_blocks":390,"idle_sessions":0,"preemptions":0,"resident":20,"steps":209,"total_blocks":2706,"waiting":4}
+15:41:53 {"active":1,"free_blocks":124,"idle_sessions":20,"preemptions":0,"resident":21,"steps":824,"total_blocks":2706,"waiting":3}
+15:42:24 {"active":16,"free_blocks":84,"idle_sessions":2,"preemptions":3,"resident":18,"steps":1324,"total_blocks":2706,"waiting":6}
+15:42:54 {"active":16,"free_blocks":151,"idle_sessions":0,"preemptions":6,"resident":16,"steps":1790,"total_blocks":2706,"waiting":8}
+15:43:25 {"active":5,"free_blocks":0,"idle_sessions":11,"preemptions":6,"resident":16,"steps":2331,"total_blocks":2706,"waiting":8}
+15:43:55 {"active":14,"free_blocks":19,"idle_sessions":1,"preemptions":7,"resident":15,"steps":2918,"total_blocks":2706,"waiting":9}
+15:44:26 {"active":14,"free_blocks":71,"idle_sessions":0,"preemptions":8,"resident":14,"steps":3454,"total_blocks":2706,"waiting":10}
+15:44:56 {"active":1,"free_blocks":193,"idle_sessions":11,"preemptions":10,"resident":12,"steps":3988,"total_blocks":2706,"waiting":12}
+15:45:27 {"active":11,"free_blocks":40,"idle_sessions":0,"preemptions":10,"resident":12,"steps":4560,"total_blocks":2706,"waiting":13}
+15:45:57 {"active":5,"free_blocks":147,"idle_sessions":6,"preemptions":11,"resident":11,"steps":5117,"total_blocks":2706,"waiting":13}
+15:46:28 {"active":4,"free_blocks":2,"idle_sessions":5,"preemptions":11,"resident":11,"steps":5699,"total_blocks":2706,"waiting":15}
+15:46:58 {"active":5,"free_blocks":16,"idle_sessions":4,"preemptions":12,"resident":10,"steps":6229,"total_blocks":2706,"waiting":15}
+15:47:28 {"active":9,"free_blocks":156,"idle_sessions":0,"preemptions":13,"resident":9,"steps":6795,"total_blocks":2706,"waiting":15}
+15:47:59 {"active":5,"free_blocks":20,"idle_sessions":4,"preemptions":13,"resident":9,"steps":7364,"total_blocks":2706,"waiting":15}
+15:48:29 {"active":8,"free_blocks":256,"idle_sessions":0,"preemptions":14,"resident":8,"steps":7923,"total_blocks":2706,"waiting":16}
+15:49:00 {"active":3,"free_blocks":77,"idle_sessions":5,"preemptions":15,"resident":8,"steps":8383,"total_blocks":2706,"waiting":16}
+15:49:30 {"active":6,"free_blocks":1,"idle_sessions":1,"preemptions":15,"resident":8,"steps":8980,"total_blocks":2706,"waiting":17}
+15:50:01 {"active":2,"free_blocks":297,"idle_sessions":5,"preemptions":16,"resident":7,"steps":9554,"total_blocks":2706,"waiting":17}
+15:50:31 {"active":6,"free_blocks":217,"idle_sessions":1,"preemptions":16,"resident":7,"steps":10180,"total_blocks":2706,"waiting":17}
+15:51:02 {"active":1,"free_blocks":174,"idle_sessions":6,"preemptions":16,"resident":6,"steps":10827,"total_blocks":2706,"waiting":17}
+15:51:32 {"active":5,"free_blocks":32,"idle_sessions":2,"preemptions":16,"resident":6,"steps":11437,"total_blocks":2706,"waiting":17}
+15:52:02 {"active":3,"free_blocks":0,"idle_sessions":4,"preemptions":16,"resident":6,"steps":12119,"total_blocks":2706,"waiting":17}
+15:52:33 {"active":4,"free_blocks":0,"idle_sessions":4,"preemptions":16,"resident":6,"steps":12662,"total_blocks":2706,"waiting":16}
+done

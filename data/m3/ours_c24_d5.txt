@@ -1,0 +1,3 @@
+sessions=24 turns=791 tool_delay=5.0s wall=3341s
+prompt_tokens=14870361 cached=1250849 (8.4%) recomputed_history=12880880 (86.6%)
+ttft p50=54.724s p90=85.642s

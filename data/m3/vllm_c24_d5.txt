@@ -1,0 +1,4 @@
+chatcmpl-1fd438c14d3da201de81a29db37bdd9e turn 31: HTTP 400 b'{"error":{"message":"This model\'s maximum context length is 32768 tokens. However, your prompt contains at least 32769 input tokens, which exceeds this limit even without any output tokens. Please red'
+sessions=24 turns=789 tool_delay=5.0s wall=2311s
+prompt_tokens=14828346 cached=6269872 (42.3%) recomputed_history=7982714 (53.8%)
+ttft p50=23.485s p90=43.614s
