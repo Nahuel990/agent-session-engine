@@ -59,7 +59,10 @@ fn common_prefix(a: &[u32], b: &[u32]) -> usize {
 
 /// Most new tokens one step may process. Long prompts are split across steps (chunked
 /// prefill) so a burst of new agent turns cannot exhaust GPU memory for activations.
-const MAX_BATCH_TOKENS: usize = 4096;
+/// Override with ENGINE_MAX_BATCH_TOKENS.
+fn max_batch_tokens() -> usize {
+    std::env::var("ENGINE_MAX_BATCH_TOKENS").ok().and_then(|v| v.parse().ok()).unwrap_or(4096)
+}
 
 /// Growth margin per resident session when deciding whether a new session fits: each
 /// resident session is counted at its current length times this factor.
@@ -120,6 +123,8 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
     let mut steps: u64 = 0;
     let mut preemptions: u64 = 0;
     let bs = engine.pool.block_size;
+    let budget = max_batch_tokens();
+    eprintln!("max batch tokens per step: {budget}");
     let mut sessions: HashMap<String, Session> = HashMap::new();
     let mut resident: HashSet<String> = HashSet::new();
     let mut active: Vec<Active> = Vec::new();
@@ -250,7 +255,7 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
         });
 
         let mut seqs: Vec<&mut Seq> = active.iter_mut().map(|a| &mut a.seq).collect();
-        let next = match engine.step(&mut seqs, MAX_BATCH_TOKENS) {
+        let next = match engine.step(&mut seqs, budget) {
             Ok(next) => next,
             Err(e) => {
                 eprintln!("engine step failed: {e}");

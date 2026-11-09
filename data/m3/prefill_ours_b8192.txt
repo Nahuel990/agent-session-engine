@@ -1,0 +1,4 @@
+{"concurrency": 1, "prompt_tokens_each": 3034, "wall_s": 0.297, "prompt_tok_per_s": 10214.3}
+{"concurrency": 8, "prompt_tokens_each": 3034, "wall_s": 2.463, "prompt_tok_per_s": 9855.1}
+{"concurrency": 1, "prompt_tokens_each": 12035, "wall_s": 1.387, "prompt_tok_per_s": 8676.8}
+{"concurrency": 4, "prompt_tokens_each": 12035, "wall_s": 5.525, "prompt_tok_per_s": 8713.3}

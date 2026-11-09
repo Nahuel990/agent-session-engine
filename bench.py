@@ -121,7 +121,8 @@ def bench_vllm(concurrency: int, tool_delay: float, mode: str = "replay", name: 
               volumes={"/root/.cache/huggingface": hf_cache, "/cache": build_cache, "/results": results})
 def bench_ours(concurrency: int, tool_delay: float, mode: str = "replay", env_flags: str = "", name: str = "") -> dict:
     import os
-    env = dict(os.environ, **{k: "1" for k in filter(None, env_flags.split(","))})
+    flags = [f.split("=", 1) if "=" in f else (f, "1") for f in filter(None, env_flags.split(","))]
+    env = dict(os.environ, **dict(flags))
     server = subprocess.Popen(["/cache/target/release/engine", "serve", MODEL, str(PORT), str(OUR_NUM_BLOCKS)], env=env)
     try:
         wait_healthy(f"http://127.0.0.1:{PORT}/health")
