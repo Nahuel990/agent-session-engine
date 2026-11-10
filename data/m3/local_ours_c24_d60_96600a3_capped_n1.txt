@@ -1,0 +1,935 @@
+10:15:30 9b59808a turn 0 prompt 7416 cached 0 35.1s
+10:15:31 8a60a347 turn 0 prompt 6929 cached 0 35.3s
+10:15:31 4ef07c28 turn 0 prompt 7248 cached 0 35.3s
+10:15:31 388aa92e turn 0 prompt 7448 cached 0 35.4s
+10:15:31 89ad529c turn 0 prompt 6645 cached 0 35.5s
+10:15:31 b37bdd9e turn 0 prompt 6679 cached 0 35.6s
+10:15:31 c081b264 turn 0 prompt 6901 cached 0 35.7s
+10:15:31 43557dc7 turn 0 prompt 6898 cached 0 35.7s
+10:15:31 ee94bf79 turn 0 prompt 7838 cached 0 35.8s
+10:15:31 d021a693 turn 0 prompt 7293 cached 0 35.9s
+10:15:31 4ad5298d turn 0 prompt 6644 cached 0 36.0s
+10:15:31 c8931cfd turn 0 prompt 6661 cached 0 36.0s
+10:15:31 bdd6cbb9 turn 0 prompt 6945 cached 0 36.1s
+10:15:32 7ecb6e41 turn 0 prompt 6735 cached 0 36.7s
+10:15:32 02f88761 turn 0 prompt 6670 cached 0 37.1s
+10:15:33 f3911fb2 turn 0 prompt 6764 cached 0 37.8s
+10:15:34 deb136cf turn 0 prompt 6698 cached 0 38.2s
+10:15:34 0ba0d3e5 turn 0 prompt 6689 cached 0 38.7s
+10:15:34 5f5a0316 turn 0 prompt 10834 cached 0 38.8s
+10:15:34 0a459d35 turn 0 prompt 6673 cached 0 38.8s
+10:15:42 8985b69a turn 0 prompt 6714 cached 0 46.3s
+10:15:42 021b1eaf turn 0 prompt 8032 cached 0 46.3s
+10:15:42 ac391b7a turn 0 prompt 6733 cached 0 46.5s
+10:15:42 a5a58471 turn 0 prompt 6737 cached 0 46.4s
+10:16:52 9b59808a turn 1 prompt 7849 cached 7416 21.2s
+10:16:52 8a60a347 turn 1 prompt 7246 cached 6929 21.3s
+10:16:52 4ef07c28 turn 1 prompt 7720 cached 7248 21.4s
+10:16:52 388aa92e turn 1 prompt 7795 cached 7296 21.5s
+10:16:53 89ad529c turn 1 prompt 8477 cached 6400 21.8s
+10:16:53 c081b264 turn 1 prompt 7359 cached 6901 22.0s
+10:16:53 b37bdd9e turn 1 prompt 6990 cached 4864 22.1s
+10:16:53 43557dc7 turn 1 prompt 7287 cached 6898 22.0s
+10:16:53 ee94bf79 turn 1 prompt 8243 cached 5632 22.3s
+10:16:53 4ad5298d turn 1 prompt 7003 cached 6644 22.1s
+10:16:53 d021a693 turn 1 prompt 7829 cached 7293 22.2s
+10:16:54 c8931cfd turn 1 prompt 7450 cached 2432 22.8s
+10:16:54 bdd6cbb9 turn 1 prompt 7361 cached 0 22.9s
+10:16:54 7ecb6e41 turn 1 prompt 7005 cached 0 22.4s
+10:16:54 02f88761 turn 1 prompt 7015 cached 0 22.1s
+10:16:55 f3911fb2 turn 1 prompt 7173 cached 0 21.4s
+10:16:55 deb136cf turn 1 prompt 7055 cached 0 21.1s
+10:16:55 0ba0d3e5 turn 1 prompt 7277 cached 0 20.7s
+10:16:55 5f5a0316 turn 1 prompt 11323 cached 2048 20.6s
+10:16:55 0a459d35 turn 1 prompt 7036 cached 6673 20.6s
+10:16:57 021b1eaf turn 1 prompt 8500 cached 4224 15.5s
+10:16:59 ac391b7a turn 1 prompt 7212 cached 0 16.9s
+10:17:02 a5a58471 turn 1 prompt 7079 cached 0 19.9s
+10:17:02 8985b69a turn 1 prompt 7061 cached 0 20.1s
+10:18:18 9b59808a turn 2 prompt 8223 cached 0 26.2s
+10:18:18 8a60a347 turn 2 prompt 7744 cached 0 26.1s
+10:18:18 4ef07c28 turn 2 prompt 8431 cached 0 26.0s
+10:18:18 388aa92e turn 2 prompt 8774 cached 0 26.0s
+10:18:18 89ad529c turn 2 prompt 12927 cached 0 25.8s
+10:18:19 c081b264 turn 2 prompt 7644 cached 0 26.2s
+10:18:20 b37bdd9e turn 2 prompt 7576 cached 0 26.7s
+10:18:20 43557dc7 turn 2 prompt 7948 cached 768 27.5s
+10:18:21 4ad5298d turn 2 prompt 7310 cached 1408 27.9s
+10:18:22 d021a693 turn 2 prompt 8079 cached 0 28.7s
+10:18:23 ee94bf79 turn 2 prompt 8912 cached 0 29.4s
+10:18:23 c8931cfd turn 2 prompt 8959 cached 0 28.7s
+10:18:23 bdd6cbb9 turn 2 prompt 7979 cached 0 28.6s
+10:18:23 deb136cf turn 2 prompt 7685 cached 4800 28.4s
+10:18:23 0ba0d3e5 turn 2 prompt 9513 cached 7277 28.3s
+10:18:23 5f5a0316 turn 2 prompt 12058 cached 11323 28.3s
+10:18:23 0a459d35 turn 2 prompt 8712 cached 7036 28.3s
+10:18:23 021b1eaf turn 2 prompt 9156 cached 1792 26.0s
+10:18:23 ac391b7a turn 2 prompt 7426 cached 64 24.5s
+10:18:31 8985b69a turn 2 prompt 12119 cached 0 29.4s
+10:18:31 7ecb6e41 turn 2 prompt 7618 cached 0 36.8s
+10:18:31 02f88761 turn 2 prompt 7387 cached 0 36.7s
+10:18:31 f3911fb2 turn 2 prompt 8706 cached 0 36.7s
+10:18:31 a5a58471 turn 2 prompt 7453 cached 0 29.6s
+10:19:45 8a60a347 turn 3 prompt 7876 cached 0 27.2s
+10:19:45 9b59808a turn 3 prompt 10132 cached 0 27.4s
+10:19:45 4ef07c28 turn 3 prompt 13126 cached 0 27.4s
+10:19:46 388aa92e turn 3 prompt 8895 cached 0 27.3s
+10:19:47 89ad529c turn 3 prompt 13370 cached 0 28.8s
+10:19:48 c081b264 turn 3 prompt 7762 cached 0 28.4s
+10:19:49 b37bdd9e turn 3 prompt 8609 cached 0 29.2s
+10:19:50 43557dc7 turn 3 prompt 10045 cached 0 29.2s
+10:19:50 4ad5298d turn 3 prompt 8050 cached 0 29.0s
+10:19:51 d021a693 turn 3 prompt 8640 cached 0 29.0s
+10:19:52 ee94bf79 turn 3 prompt 9027 cached 0 29.2s
+10:19:53 c8931cfd turn 3 prompt 9385 cached 0 30.2s
+10:19:53 bdd6cbb9 turn 3 prompt 9058 cached 0 30.2s
+10:19:53 ac391b7a turn 3 prompt 8005 cached 7426 30.1s
+10:19:53 021b1eaf turn 3 prompt 9280 cached 5248 30.1s
+10:19:55 02f88761 turn 3 prompt 8163 cached 5632 23.9s
+10:19:55 f3911fb2 turn 3 prompt 14295 cached 8706 23.9s
+10:20:01 7ecb6e41 turn 3 prompt 8684 cached 0 30.2s
+10:20:03 a5a58471 turn 3 prompt 8097 cached 0 31.3s
+10:20:03 deb136cf turn 3 prompt 8711 cached 0 39.8s
+10:20:03 0ba0d3e5 turn 3 prompt 10731 cached 0 39.9s
+10:20:03 0a459d35 turn 3 prompt 9836 cached 0 39.9s
+10:20:03 5f5a0316 turn 3 prompt 12185 cached 0 40.0s
+10:20:03 8985b69a turn 3 prompt 13428 cached 0 32.1s
+10:21:12 8a60a347 turn 4 prompt 8007 cached 0 26.9s
+10:21:12 9b59808a turn 4 prompt 10253 cached 0 26.9s
+10:21:12 4ef07c28 turn 4 prompt 14155 cached 0 26.9s
+10:21:13 388aa92e turn 4 prompt 10078 cached 0 26.9s
+10:21:14 89ad529c turn 4 prompt 15113 cached 0 26.5s
+10:21:15 c081b264 turn 4 prompt 8490 cached 0 26.9s
+10:21:15 b37bdd9e turn 4 prompt 10107 cached 0 26.5s
+10:21:17 43557dc7 turn 4 prompt 10541 cached 0 27.0s
+10:21:18 4ad5298d turn 4 prompt 8300 cached 0 27.3s
+10:21:18 d021a693 turn 4 prompt 9893 cached 0 27.4s
+10:21:20 ee94bf79 turn 4 prompt 10055 cached 0 27.8s
+10:21:21 c8931cfd turn 4 prompt 9495 cached 0 27.6s
+10:21:22 bdd6cbb9 turn 4 prompt 11843 cached 0 28.8s
+10:21:28 8985b69a turn 4 prompt 13802 cached 13428 25.0s
+10:21:28 5f5a0316 turn 4 prompt 13407 cached 10688 25.1s
+10:21:33 0a459d35 turn 4 prompt 10777 cached 0 30.3s
+10:21:34 021b1eaf turn 4 prompt 10284 cached 0 41.2s
+10:21:35 ac391b7a turn 4 prompt 8683 cached 0 41.3s
+10:21:35 02f88761 turn 4 prompt 15226 cached 0 39.5s
+10:21:35 f3911fb2 turn 4 prompt 14422 cached 0 39.6s
+10:21:35 7ecb6e41 turn 4 prompt 9808 cached 0 33.5s
+10:21:35 a5a58471 turn 4 prompt 8413 cached 0 32.3s
+10:21:35 deb136cf turn 4 prompt 10137 cached 0 32.2s
+10:21:35 0ba0d3e5 turn 4 prompt 12398 cached 0 32.2s
+10:22:39 8a60a347 turn 5 prompt 8125 cached 0 26.9s
+10:22:39 9b59808a turn 5 prompt 11282 cached 0 26.9s
+10:22:39 4ef07c28 turn 5 prompt 16119 cached 0 26.9s
+10:22:39 388aa92e turn 5 prompt 10203 cached 0 26.9s
+10:22:41 89ad529c turn 5 prompt 17196 cached 0 27.2s
+10:22:42 c081b264 turn 5 prompt 8639 cached 0 27.2s
+10:22:43 b37bdd9e turn 5 prompt 10852 cached 0 27.7s
+10:22:44 43557dc7 turn 5 prompt 10756 cached 0 27.3s
+10:22:45 4ad5298d turn 5 prompt 8854 cached 0 27.3s
+10:22:46 d021a693 turn 5 prompt 10090 cached 0 27.8s
+10:22:48 ee94bf79 turn 5 prompt 12028 cached 0 27.8s
+10:22:48 c8931cfd turn 5 prompt 9614 cached 0 27.8s
+10:22:57 7ecb6e41 turn 5 prompt 10065 cached 4992 22.4s
+10:22:58 a5a58471 turn 5 prompt 8640 cached 3392 23.2s
+10:22:58 deb136cf turn 5 prompt 12184 cached 10137 23.2s
+10:23:02 0ba0d3e5 turn 5 prompt 13214 cached 0 26.6s
+10:23:03 bdd6cbb9 turn 5 prompt 11958 cached 0 41.1s
+10:23:04 5f5a0316 turn 5 prompt 13530 cached 0 35.3s
+10:23:04 8985b69a turn 5 prompt 14535 cached 0 35.4s
+10:23:04 0a459d35 turn 5 prompt 11161 cached 0 30.5s
+10:23:04 021b1eaf turn 5 prompt 10510 cached 0 29.4s
+10:23:04 ac391b7a turn 5 prompt 8833 cached 0 29.4s
+10:23:09 02f88761 turn 5 prompt 15901 cached 0 34.8s
+10:23:11 f3911fb2 turn 5 prompt 14550 cached 0 36.2s
+10:24:06 8a60a347 turn 6 prompt 9129 cached 0 26.7s
+10:24:06 9b59808a turn 6 prompt 11398 cached 0 26.6s
+10:24:07 4ef07c28 turn 6 prompt 16493 cached 0 27.6s
+10:24:08 388aa92e turn 6 prompt 10623 cached 0 28.3s
+10:24:09 89ad529c turn 6 prompt 17730 cached 0 28.2s
+10:24:10 c081b264 turn 6 prompt 9636 cached 0 28.6s
+10:24:12 b37bdd9e turn 6 prompt 11484 cached 0 28.5s
+10:24:12 43557dc7 turn 6 prompt 10909 cached 0 28.4s
+10:24:14 4ad5298d turn 6 prompt 9003 cached 0 28.7s
+10:24:15 d021a693 turn 6 prompt 10223 cached 0 28.3s
+10:24:16 ee94bf79 turn 6 prompt 12560 cached 0 28.2s
+10:24:17 c8931cfd turn 6 prompt 9730 cached 0 28.1s
+10:24:30 ac391b7a turn 6 prompt 9364 cached 128 25.7s
+10:24:32 7ecb6e41 turn 6 prompt 11715 cached 0 34.8s
+10:24:32 a5a58471 turn 6 prompt 8931 cached 0 34.1s
+10:24:32 deb136cf turn 6 prompt 12459 cached 0 34.2s
+10:24:33 0ba0d3e5 turn 6 prompt 13362 cached 0 30.9s
+10:24:33 bdd6cbb9 turn 6 prompt 12448 cached 0 29.6s
+10:24:33 5f5a0316 turn 6 prompt 13666 cached 0 29.3s
+10:24:33 8985b69a turn 6 prompt 14682 cached 0 29.4s
+10:24:33 0a459d35 turn 6 prompt 12167 cached 0 29.4s
+10:24:33 021b1eaf turn 6 prompt 10815 cached 0 29.3s
+10:24:33 02f88761 turn 6 prompt 16032 cached 0 23.8s
+10:24:39 f3911fb2 turn 6 prompt 14758 cached 0 27.8s
+10:25:31 8a60a347 turn 7 prompt 9267 cached 0 25.4s
+10:25:32 9b59808a turn 7 prompt 11540 cached 0 26.3s
+10:25:33 4ef07c28 turn 7 prompt 16623 cached 0 26.1s
+10:25:34 388aa92e turn 7 prompt 11008 cached 0 26.1s
+10:25:35 89ad529c turn 7 prompt 18243 cached 0 26.1s
+10:25:36 c081b264 turn 7 prompt 9771 cached 0 25.6s
+10:25:37 b37bdd9e turn 7 prompt 12985 cached 0 25.6s
+10:25:38 43557dc7 turn 7 prompt 11666 cached 0 26.1s
+10:25:39 4ad5298d turn 7 prompt 10845 cached 0 25.6s
+10:25:40 d021a693 turn 7 prompt 12629 cached 0 25.9s
+10:25:42 ee94bf79 turn 7 prompt 12693 cached 0 25.9s
+10:25:54 c8931cfd turn 7 prompt 9947 cached 0 37.9s
+10:25:56 ac391b7a turn 7 prompt 9519 cached 0 26.0s
+10:25:57 7ecb6e41 turn 7 prompt 12056 cached 0 25.3s
+10:25:59 a5a58471 turn 7 prompt 9128 cached 0 26.3s
+10:26:00 deb136cf turn 7 prompt 12965 cached 0 28.0s
+10:26:01 0ba0d3e5 turn 7 prompt 13475 cached 0 27.9s
+10:26:01 bdd6cbb9 turn 7 prompt 12977 cached 0 27.9s
+10:26:01 5f5a0316 turn 7 prompt 13862 cached 0 28.0s
+10:26:01 8985b69a turn 7 prompt 14817 cached 0 28.0s
+10:26:01 0a459d35 turn 7 prompt 12294 cached 0 28.0s
+10:26:09 021b1eaf turn 7 prompt 10956 cached 0 35.7s
+10:26:09 02f88761 turn 7 prompt 16304 cached 0 35.7s
+10:26:09 f3911fb2 turn 7 prompt 21369 cached 0 30.3s
+10:26:56 8a60a347 turn 8 prompt 9508 cached 0 25.0s
+10:26:58 9b59808a turn 8 prompt 12497 cached 0 25.8s
+10:26:59 4ef07c28 turn 8 prompt 18279 cached 0 25.9s
+10:27:00 388aa92e turn 8 prompt 12269 cached 0 26.3s
+10:27:02 89ad529c turn 8 prompt 20010 cached 0 26.9s
+10:27:03 c081b264 turn 8 prompt 11119 cached 0 27.3s
+10:27:05 b37bdd9e turn 8 prompt 13479 cached 0 27.3s
+10:27:06 43557dc7 turn 8 prompt 12283 cached 0 27.3s
+10:27:07 4ad5298d turn 8 prompt 11042 cached 0 27.8s
+10:27:08 d021a693 turn 8 prompt 13425 cached 0 27.3s
+10:27:20 ee94bf79 turn 8 prompt 13125 cached 0 38.7s
+10:27:22 c8931cfd turn 8 prompt 10071 cached 0 27.5s
+10:27:24 ac391b7a turn 8 prompt 10113 cached 0 28.0s
+10:27:24 7ecb6e41 turn 8 prompt 12193 cached 0 26.4s
+10:27:25 a5a58471 turn 8 prompt 9329 cached 0 26.0s
+10:27:26 deb136cf turn 8 prompt 13135 cached 0 26.0s
+10:27:28 0ba0d3e5 turn 8 prompt 13843 cached 0 27.4s
+10:27:28 bdd6cbb9 turn 8 prompt 13689 cached 0 27.6s
+10:27:28 5f5a0316 turn 8 prompt 14455 cached 0 27.6s
+10:27:29 8985b69a turn 8 prompt 15065 cached 0 27.6s
+10:27:37 0a459d35 turn 8 prompt 12679 cached 0 35.9s
+10:27:37 021b1eaf turn 8 prompt 15085 cached 0 28.6s
+10:27:38 02f88761 turn 8 prompt 16550 cached 0 28.7s
+10:27:38 f3911fb2 turn 8 prompt 21943 cached 0 28.7s
+10:28:21 8a60a347 turn 9 prompt 11169 cached 0 24.9s
+10:28:24 9b59808a turn 9 prompt 12626 cached 0 26.4s
+10:28:26 4ef07c28 turn 9 prompt 18446 cached 0 26.8s
+10:28:27 388aa92e turn 9 prompt 12428 cached 0 26.9s
+10:28:28 89ad529c turn 9 prompt 24059 cached 0 26.3s
+10:28:30 c081b264 turn 9 prompt 11572 cached 0 26.4s
+10:28:31 b37bdd9e turn 9 prompt 14542 cached 0 26.9s
+10:28:33 43557dc7 turn 9 prompt 12539 cached 0 27.0s
+10:28:34 4ad5298d turn 9 prompt 14290 cached 0 27.1s
+10:28:48 d021a693 turn 9 prompt 15386 cached 0 40.1s
+10:28:51 ee94bf79 turn 9 prompt 13279 cached 0 30.6s
+10:28:52 c8931cfd turn 9 prompt 11900 cached 0 30.3s
+10:28:54 ac391b7a turn 9 prompt 11863 cached 0 29.9s
+10:28:54 7ecb6e41 turn 9 prompt 16001 cached 0 30.5s
+10:28:56 a5a58471 turn 9 prompt 9560 cached 0 31.0s
+10:28:56 deb136cf turn 9 prompt 13677 cached 0 30.0s
+10:28:58 0ba0d3e5 turn 9 prompt 14121 cached 0 30.2s
+10:29:00 bdd6cbb9 turn 9 prompt 14755 cached 0 31.5s
+10:29:00 5f5a0316 turn 9 prompt 15933 cached 0 31.5s
+10:29:08 8985b69a turn 9 prompt 15200 cached 0 39.7s
+10:29:10 0a459d35 turn 9 prompt 12942 cached 0 32.5s
+10:29:10 021b1eaf turn 9 prompt 15229 cached 0 32.3s
+10:29:10 02f88761 turn 9 prompt 17038 cached 0 32.4s
+10:29:10 f3911fb2 turn 9 prompt 27429 cached 0 32.5s
+10:29:45 8a60a347 turn 10 prompt 12509 cached 0 24.1s
+10:29:51 9b59808a turn 10 prompt 13418 cached 0 26.6s
+10:29:51 4ef07c28 turn 10 prompt 18587 cached 0 25.7s
+10:29:53 388aa92e turn 10 prompt 13596 cached 0 25.7s
+10:29:55 89ad529c turn 10 prompt 25515 cached 0 27.0s
+10:29:57 c081b264 turn 10 prompt 11993 cached 0 26.9s
+10:29:58 b37bdd9e turn 10 prompt 15782 cached 0 26.5s
+10:30:00 43557dc7 turn 10 prompt 12906 cached 0 26.8s
+10:30:01 4ad5298d turn 10 prompt 14471 cached 0 26.7s
+10:30:15 d021a693 turn 10 prompt 15532 cached 0 27.1s
+10:30:17 ee94bf79 turn 10 prompt 14502 cached 0 25.9s
+10:30:18 c8931cfd turn 10 prompt 12105 cached 0 25.9s
+10:30:19 ac391b7a turn 10 prompt 12218 cached 0 25.9s
+10:30:21 7ecb6e41 turn 10 prompt 16263 cached 0 26.9s
+10:30:22 a5a58471 turn 10 prompt 10672 cached 0 26.9s
+10:30:24 deb136cf turn 10 prompt 13800 cached 0 27.3s
+10:30:25 0ba0d3e5 turn 10 prompt 15617 cached 0 27.3s
+10:30:27 bdd6cbb9 turn 10 prompt 16051 cached 0 27.3s
+10:30:27 5f5a0316 turn 10 prompt 16498 cached 0 27.3s
+10:30:37 8985b69a turn 10 prompt 15623 cached 0 28.8s
+10:30:37 0a459d35 turn 10 prompt 13084 cached 0 27.7s
+10:30:37 021b1eaf turn 10 prompt 15539 cached 0 27.7s
+10:30:38 02f88761 turn 10 prompt 17645 cached 0 27.5s
+10:30:38 f3911fb2 turn 10 prompt 27559 cached 0 27.5s
+10:31:07 8a60a347 turn 11 prompt 12629 cached 0 21.3s
+10:31:17 9b59808a turn 11 prompt 13917 cached 0 26.5s
+10:31:19 4ef07c28 turn 11 prompt 23212 cached 0 27.7s
+10:31:20 388aa92e turn 11 prompt 15202 cached 0 27.8s
+10:31:24 89ad529c turn 11 prompt 25683 cached 0 28.3s
+10:31:25 c081b264 turn 11 prompt 12430 cached 0 28.3s
+10:31:27 b37bdd9e turn 11 prompt 16542 cached 0 28.8s
+10:31:28 43557dc7 turn 11 prompt 13248 cached 0 28.3s
+10:31:34 4ad5298d turn 11 prompt 14852 cached 0 32.8s
+10:31:45 d021a693 turn 11 prompt 15664 cached 0 29.9s
+10:31:45 ee94bf79 turn 11 prompt 20523 cached 0 28.5s
+10:31:47 c8931cfd turn 11 prompt 19338 cached 0 29.0s
+10:31:49 ac391b7a turn 11 prompt 12666 cached 0 29.5s
+10:31:51 7ecb6e41 turn 11 prompt 16532 cached 0 29.4s
+10:31:51 a5a58471 turn 11 prompt 10863 cached 0 29.0s
+10:31:53 deb136cf turn 11 prompt 14611 cached 0 29.7s
+10:31:55 0ba0d3e5 turn 11 prompt 16302 cached 0 29.7s
+10:32:00 bdd6cbb9 turn 11 prompt 16312 cached 0 32.9s
+10:32:10 5f5a0316 turn 11 prompt 16738 cached 0 42.9s
+10:32:10 8985b69a turn 11 prompt 15779 cached 0 33.2s
+10:32:11 0a459d35 turn 11 prompt 13271 cached 0 33.2s
+10:32:11 021b1eaf turn 11 prompt 16282 cached 0 33.2s
+10:32:11 02f88761 turn 11 prompt 17796 cached 0 33.2s
+10:32:11 f3911fb2 turn 11 prompt 28852 cached 0 33.3s
+10:32:16 8a60a347 turn 12 prompt 12789 cached 0 9.3s
+10:32:45 9b59808a turn 12 prompt 14381 cached 0 27.3s
+10:32:46 4ef07c28 turn 12 prompt 24912 cached 0 26.6s
+10:32:48 388aa92e turn 12 prompt 16584 cached 0 27.2s
+10:32:51 89ad529c turn 12 prompt 25954 cached 0 26.9s
+10:32:52 c081b264 turn 12 prompt 12846 cached 0 27.0s
+10:32:54 b37bdd9e turn 12 prompt 16689 cached 0 27.2s
+10:32:55 43557dc7 turn 12 prompt 13367 cached 0 27.3s
+10:33:01 4ad5298d turn 12 prompt 15212 cached 0 27.3s
+10:33:13 d021a693 turn 12 prompt 19291 cached 0 28.0s
+10:33:15 ee94bf79 turn 12 prompt 20636 cached 0 29.8s
+10:33:17 c8931cfd turn 12 prompt 19547 cached 0 30.0s
+10:33:19 ac391b7a turn 12 prompt 12984 cached 0 29.6s
+10:33:21 7ecb6e41 turn 12 prompt 17334 cached 0 30.1s
+10:33:22 a5a58471 turn 12 prompt 10974 cached 0 30.1s
+10:33:23 deb136cf turn 12 prompt 14846 cached 0 30.1s
+10:33:26 0ba0d3e5 turn 12 prompt 16425 cached 0 31.4s
+10:33:40 bdd6cbb9 turn 12 prompt 19110 cached 0 40.1s
+10:33:42 5f5a0316 turn 12 prompt 16921 cached 0 31.4s
+10:33:42 8985b69a turn 12 prompt 17660 cached 0 31.5s
+10:33:42 0a459d35 turn 12 prompt 13611 cached 0 31.5s
+10:33:42 021b1eaf turn 12 prompt 16703 cached 0 31.5s
+10:33:42 02f88761 turn 12 prompt 18231 cached 0 31.5s
+10:33:44 f3911fb2 turn 12 prompt 29000 cached 0 32.7s
+10:34:05 8a60a347 turn 13 prompt 12971 cached 0 49.4s
+10:34:12 9b59808a turn 13 prompt 16110 cached 0 27.3s
+10:34:14 4ef07c28 turn 13 prompt 25482 cached 0 28.2s
+10:34:16 388aa92e turn 13 prompt 17988 cached 0 28.2s
+10:34:19 89ad529c turn 13 prompt 26196 cached 0 28.4s
+10:34:21 c081b264 turn 13 prompt 13576 cached 0 28.9s
+10:34:23 b37bdd9e turn 13 prompt 17419 cached 0 29.0s
+10:34:33 43557dc7 turn 13 prompt 14608 cached 0 37.9s
+10:34:40 4ad5298d turn 13 prompt 15344 cached 0 39.2s
+10:34:42 d021a693 turn 13 prompt 19680 cached 0 29.4s
+10:34:45 ee94bf79 turn 13 prompt 21039 cached 0 29.5s
+10:34:47 c8931cfd turn 13 prompt 21964 cached 0 29.7s
+10:34:48 ac391b7a turn 13 prompt 13147 cached 0 29.6s
+10:34:50 7ecb6e41 turn 13 prompt 18530 cached 0 29.7s
+10:34:51 a5a58471 turn 13 prompt 11481 cached 0 29.7s
+10:35:01 deb136cf turn 13 prompt 16671 cached 0 37.8s
+10:35:06 0ba0d3e5 turn 13 prompt 16583 cached 0 39.8s
+10:35:10 bdd6cbb9 turn 13 prompt 19738 cached 0 30.1s
+10:35:12 5f5a0316 turn 13 prompt 17400 cached 0 30.3s
+10:35:14 8985b69a turn 13 prompt 17850 cached 0 32.1s
+10:35:15 0a459d35 turn 13 prompt 13813 cached 0 33.4s
+10:35:18 021b1eaf turn 13 prompt 18262 cached 0 35.9s
+10:35:20 02f88761 turn 13 prompt 18407 cached 0 37.4s
+10:35:35 f3911fb2 turn 13 prompt 29572 cached 0 51.1s
+10:35:37 8a60a347 turn 14 prompt 14335 cached 0 31.6s
+10:35:40 9b59808a turn 14 prompt 16788 cached 0 27.7s
+10:35:42 4ef07c28 turn 14 prompt 25674 cached 0 27.7s
+10:35:43 388aa92e turn 14 prompt 19391 cached 0 27.7s
+10:35:46 89ad529c turn 14 prompt 26455 cached 0 27.1s
+10:36:02 c081b264 turn 14 prompt 20127 cached 0 41.4s
+10:36:04 b37bdd9e turn 14 prompt 18339 cached 0 41.1s
+10:36:06 43557dc7 turn 14 prompt 15501 cached 0 33.2s
+10:36:09 4ad5298d turn 14 prompt 15476 cached 0 29.2s
+10:36:10 d021a693 turn 14 prompt 20314 cached 0 27.4s
+10:36:10 ee94bf79 turn 14 prompt 21563 cached 0 25.4s
+10:36:20 c8931cfd turn 14 prompt 22225 cached 0 32.9s
+10:36:27 ac391b7a turn 14 prompt 14526 cached 0 38.7s
+10:36:30 7ecb6e41 turn 14 prompt 19457 cached 0 39.1s
+10:36:31 a5a58471 turn 14 prompt 11602 cached 0 39.6s
+10:36:33 deb136cf turn 14 prompt 17121 cached 0 31.4s
+10:36:35 0ba0d3e5 turn 14 prompt 16737 cached 0 29.2s
+10:36:36 bdd6cbb9 turn 14 prompt 20383 cached 0 25.4s
+10:36:46 5f5a0316 turn 14 prompt 17955 cached 0 34.5s
+10:36:54 8985b69a turn 14 prompt 17978 cached 0 39.8s
+10:36:55 0a459d35 turn 14 prompt 14051 cached 0 39.8s
+10:36:57 021b1eaf turn 14 prompt 18444 cached 0 39.1s
+10:36:59 02f88761 turn 14 prompt 18602 cached 0 39.7s
+10:37:04 f3911fb2 turn 14 prompt 30090 cached 0 29.0s
+10:37:05 8a60a347 turn 15 prompt 14456 cached 0 28.4s
+10:37:14 9b59808a turn 15 prompt 17431 cached 0 34.1s
+10:37:21 4ef07c28 turn 15 prompt 26055 cached 0 39.5s
+10:37:24 388aa92e turn 15 prompt 19627 cached 0 40.3s
+10:37:27 89ad529c turn 15 prompt 26892 cached 0 41.1s
+10:37:32 c081b264 turn 15 prompt 21371 cached 0 29.3s
+10:37:33 b37bdd9e turn 15 prompt 19256 cached 0 29.3s
+10:37:41 43557dc7 turn 15 prompt 16441 cached 0 34.6s
+10:37:48 4ad5298d turn 15 prompt 15723 cached 0 38.1s
+10:37:50 d021a693 turn 15 prompt 20447 cached 0 39.9s
+10:37:52 ee94bf79 turn 15 prompt 21701 cached 0 41.6s
+10:37:54 c8931cfd turn 15 prompt 22457 cached 0 34.4s
+10:37:59 ac391b7a turn 15 prompt 15200 cached 0 32.5s
+10:38:00 7ecb6e41 turn 15 prompt 20369 cached 0 30.0s
+10:38:09 a5a58471 turn 15 prompt 11730 cached 0 38.4s
+10:38:15 deb136cf turn 15 prompt 17667 cached 0 42.5s
+10:38:17 0ba0d3e5 turn 15 prompt 16927 cached 0 41.9s
+10:38:19 bdd6cbb9 turn 15 prompt 21005 cached 0 43.5s
+10:38:21 5f5a0316 turn 15 prompt 18430 cached 0 34.7s
+10:38:23 8985b69a turn 15 prompt 18406 cached 0 29.5s
+10:38:29 0a459d35 turn 15 prompt 19372 cached 0 33.7s
+10:38:29 021b1eaf turn 15 prompt 19585 cached 0 31.9s
+10:38:43 02f88761 turn 15 prompt 18915 cached 0 43.6s
+10:38:45 8a60a347 turn 16 prompt 14820 cached 0 39.7s
+10:38:48 9b59808a turn 16 prompt 17580 cached 0 34.2s
+10:38:50 4ef07c28 turn 16 prompt 28755 cached 0 29.0s
+10:38:52 388aa92e turn 16 prompt 20513 cached 0 28.2s
+10:38:56 89ad529c turn 16 prompt 27236 cached 0 28.5s
+10:39:12 c081b264 turn 16 prompt 21524 cached 0 40.1s
+10:39:13 b37bdd9e turn 16 prompt 19695 cached 0 40.2s
+10:39:16 43557dc7 turn 16 prompt 16835 cached 0 35.1s
+10:39:17 4ad5298d turn 16 prompt 16035 cached 0 29.9s
+10:39:20 d021a693 turn 16 prompt 22749 cached 0 30.0s
+10:39:23 ee94bf79 turn 16 prompt 21903 cached 0 31.0s
+10:39:25 c8931cfd turn 16 prompt 22755 cached 0 30.9s
+10:39:38 ac391b7a turn 16 prompt 15448 cached 0 38.4s
+10:39:40 7ecb6e41 turn 16 prompt 20540 cached 0 40.4s
+10:39:41 a5a58471 turn 16 prompt 11900 cached 0 32.0s
+10:39:43 deb136cf turn 16 prompt 17973 cached 0 27.7s
+10:39:45 0ba0d3e5 turn 16 prompt 17250 cached 0 27.8s
+10:39:48 bdd6cbb9 turn 16 prompt 24564 cached 0 29.2s
+10:39:50 5f5a0316 turn 16 prompt 18581 cached 0 29.1s
+10:40:05 8985b69a turn 16 prompt 18573 cached 0 41.9s
+10:40:08 0a459d35 turn 16 prompt 20275 cached 0 39.0s
+10:40:08 021b1eaf turn 16 prompt 19806 cached 0 39.3s
+10:40:12 02f88761 turn 16 prompt 19152 cached 0 28.9s
+10:40:16 8a60a347 turn 17 prompt 14982 cached 0 30.9s
+10:40:18 9b59808a turn 17 prompt 17865 cached 0 30.1s
+10:40:27 4ef07c28 turn 17 prompt 29122 cached 0 37.4s
+10:40:32 388aa92e turn 17 prompt 20775 cached 0 40.0s
+10:40:36 89ad529c turn 17 prompt 27668 cached 0 39.8s
+10:40:38 c081b264 turn 17 prompt 22439 cached 0 26.5s
+10:40:44 b37bdd9e turn 17 prompt 19921 cached 0 30.4s
+10:40:46 43557dc7 turn 17 prompt 17191 cached 0 30.4s
+10:40:55 4ad5298d turn 17 prompt 16388 cached 0 37.9s
+10:40:58 d021a693 turn 17 prompt 23055 cached 0 38.5s
+10:41:01 ee94bf79 turn 17 prompt 22068 cached 0 38.3s
+10:41:03 c8931cfd turn 17 prompt 22979 cached 0 38.0s
+10:41:05 ac391b7a turn 17 prompt 17050 cached 0 27.1s
+10:41:09 7ecb6e41 turn 17 prompt 21503 cached 0 29.5s
+10:41:11 a5a58471 turn 17 prompt 12934 cached 0 29.5s
+10:41:27 deb136cf turn 17 prompt 18142 cached 0 44.0s
+10:41:30 0ba0d3e5 turn 17 prompt 17632 cached 0 44.8s
+10:41:32 bdd6cbb9 turn 17 prompt 27556 cached 0 43.4s
+10:41:34 5f5a0316 turn 17 prompt 18800 cached 0 43.8s
+10:41:35 8985b69a turn 17 prompt 18716 cached 0 29.7s
+10:41:37 0a459d35 turn 17 prompt 20454 cached 0 29.6s
+10:41:40 021b1eaf turn 17 prompt 19955 cached 0 31.8s
+10:41:55 02f88761 turn 17 prompt 19460 cached 0 43.3s
+10:41:59 8a60a347 turn 18 prompt 15428 cached 0 43.4s
+10:42:00 9b59808a turn 18 prompt 18120 cached 0 41.5s
+10:42:05 4ef07c28 turn 18 prompt 31773 cached 0 37.7s
+10:42:07 388aa92e turn 18 prompt 21053 cached 0 35.3s
+10:42:10 89ad529c turn 18 prompt 28156 cached 0 34.9s
+10:42:23 c081b264 turn 18 prompt 24304 cached 0 44.5s
+10:42:29 b37bdd9e turn 18 prompt 20107 cached 0 44.6s
+10:42:31 43557dc7 turn 18 prompt 17628 cached 0 44.6s
+10:42:34 4ad5298d turn 18 prompt 17027 cached 0 38.2s
+10:42:36 d021a693 turn 18 prompt 23550 cached 0 37.5s
+10:42:38 ee94bf79 turn 18 prompt 22257 cached 0 36.9s
+10:42:51 c8931cfd turn 18 prompt 23215 cached 0 48.4s
+10:42:53 ac391b7a turn 18 prompt 17207 cached 0 48.4s
+10:42:57 7ecb6e41 turn 18 prompt 21719 cached 0 47.4s
+10:42:58 a5a58471 turn 18 prompt 13067 cached 0 47.4s
+10:43:00 deb136cf turn 18 prompt 18283 cached 0 33.7s
+10:43:03 0ba0d3e5 turn 18 prompt 17877 cached 0 33.0s
+10:43:05 bdd6cbb9 turn 18 prompt 28121 cached 0 33.6s
+10:43:19 5f5a0316 turn 18 prompt 19302 cached 0 44.8s
+10:43:21 8985b69a turn 18 prompt 19044 cached 0 46.4s
+10:43:23 0a459d35 turn 18 prompt 21277 cached 0 45.3s
+10:43:27 021b1eaf turn 18 prompt 20677 cached 0 47.1s
+10:43:30 02f88761 turn 18 prompt 19769 cached 0 34.4s
+10:43:33 8a60a347 turn 19 prompt 15855 cached 0 33.9s
+10:43:35 9b59808a turn 19 prompt 18625 cached 0 35.5s
+10:43:47 388aa92e turn 19 prompt 22338 cached 0 39.3s
+10:43:51 89ad529c turn 19 prompt 28884 cached 0 40.6s
+10:43:55 c081b264 turn 19 prompt 25406 cached 0 32.0s
+10:43:57 b37bdd9e turn 19 prompt 20462 cached 0 28.6s
+10:44:00 43557dc7 turn 19 prompt 17931 cached 0 28.7s
+10:44:02 4ad5298d turn 19 prompt 17965 cached 0 28.5s
+10:44:16 d021a693 turn 19 prompt 25020 cached 0 39.9s
+10:44:17 ee94bf79 turn 19 prompt 22632 cached 0 39.2s
+10:44:20 c8931cfd turn 19 prompt 23347 cached 0 28.7s
+10:44:20 ac391b7a turn 19 prompt 17401 cached 0 27.0s
+10:44:24 7ecb6e41 turn 19 prompt 22123 cached 0 27.3s
+10:44:26 a5a58471 turn 19 prompt 13209 cached 0 27.4s
+10:44:28 deb136cf turn 19 prompt 18593 cached 0 27.6s
+10:44:45 0ba0d3e5 turn 19 prompt 18348 cached 0 42.1s
+10:44:49 bdd6cbb9 turn 19 prompt 30320 cached 0 43.4s
+10:44:51 5f5a0316 turn 19 prompt 19461 cached 0 32.2s
+10:44:53 8985b69a turn 19 prompt 19727 cached 0 31.8s
+10:44:56 0a459d35 turn 19 prompt 22596 cached 0 33.5s
+10:45:01 021b1eaf turn 19 prompt 21047 cached 0 33.8s
+10:45:14 02f88761 turn 19 prompt 20150 cached 0 44.0s
+10:45:18 8a60a347 turn 20 prompt 16214 cached 0 44.6s
+10:45:20 9b59808a turn 20 prompt 23973 cached 0 44.8s
+10:45:22 388aa92e turn 20 prompt 22738 cached 0 35.6s
+10:45:25 89ad529c turn 20 prompt 29056 cached 0 34.4s
+10:45:29 c081b264 turn 20 prompt 25535 cached 0 34.7s
+10:45:41 b37bdd9e turn 20 prompt 20896 cached 0 44.3s
+10:45:45 43557dc7 turn 20 prompt 19135 cached 0 45.2s
+10:45:48 4ad5298d turn 20 prompt 19296 cached 0 45.5s
+10:45:49 d021a693 turn 20 prompt 25402 cached 0 33.6s
+10:45:52 ee94bf79 turn 20 prompt 23938 cached 0 35.0s
+10:45:57 c8931cfd turn 20 prompt 23466 cached 0 36.9s
+10:46:09 ac391b7a turn 20 prompt 18010 cached 0 48.4s
+10:46:13 7ecb6e41 turn 20 prompt 22836 cached 0 48.7s
+10:46:15 a5a58471 turn 20 prompt 13723 cached 0 49.1s
+10:46:16 deb136cf turn 20 prompt 18831 cached 0 47.9s
+10:46:18 0ba0d3e5 turn 20 prompt 18800 cached 0 33.3s
+10:46:20 5f5a0316 turn 20 prompt 21176 cached 0 29.1s
+10:46:24 8985b69a turn 20 prompt 20530 cached 0 30.9s
+10:46:36 0a459d35 turn 20 prompt 22820 cached 0 39.9s
+10:46:41 021b1eaf turn 20 prompt 22526 cached 0 40.0s
+10:46:45 02f88761 turn 20 prompt 20521 cached 0 30.9s
+10:46:47 8a60a347 turn 21 prompt 16349 cached 0 28.9s
+10:46:47 9b59808a turn 21 prompt 24626 cached 0 27.5s
+10:46:53 388aa92e turn 21 prompt 23751 cached 0 30.6s
+10:47:06 89ad529c turn 21 prompt 29363 cached 0 40.2s
+10:47:10 c081b264 turn 21 prompt 25661 cached 0 40.5s
+10:47:13 b37bdd9e turn 21 prompt 21032 cached 0 31.7s
+10:47:16 43557dc7 turn 21 prompt 19733 cached 0 30.8s
+10:47:18 4ad5298d turn 21 prompt 20130 cached 0 30.6s
+10:47:21 d021a693 turn 21 prompt 25549 cached 0 31.6s
+10:47:32 ee94bf79 turn 21 prompt 24121 cached 0 40.3s
+10:47:38 c8931cfd turn 21 prompt 23593 cached 0 41.4s
+10:47:41 ac391b7a turn 21 prompt 18462 cached 0 32.6s
+10:47:42 7ecb6e41 turn 21 prompt 22964 cached 0 29.0s
+10:47:44 a5a58471 turn 21 prompt 14277 cached 0 29.1s
+10:47:48 deb136cf turn 21 prompt 20793 cached 0 32.4s
+10:48:00 0ba0d3e5 turn 21 prompt 19891 cached 0 41.6s
+10:48:02 5f5a0316 turn 21 prompt 21624 cached 0 41.8s
+10:48:06 8985b69a turn 21 prompt 20675 cached 0 42.3s
+10:48:10 0a459d35 turn 21 prompt 23179 cached 0 34.3s
+10:48:13 021b1eaf turn 21 prompt 22673 cached 0 32.3s
+10:48:15 02f88761 turn 21 prompt 20662 cached 0 30.5s
+10:48:28 8a60a347 turn 22 prompt 17055 cached 0 41.0s
+10:48:30 9b59808a turn 22 prompt 25404 cached 0 42.9s
+10:48:34 388aa92e turn 22 prompt 24414 cached 0 40.9s
+10:48:37 89ad529c turn 22 prompt 29804 cached 0 31.5s
+10:48:44 c081b264 turn 22 prompt 27608 cached 0 34.1s
+10:48:56 b37bdd9e turn 22 prompt 22424 cached 0 43.0s
+10:48:59 43557dc7 turn 22 prompt 20072 cached 0 42.9s
+10:49:02 4ad5298d turn 22 prompt 20496 cached 0 44.3s
+10:49:05 d021a693 turn 22 prompt 26415 cached 0 44.3s
+10:49:08 ee94bf79 turn 22 prompt 24564 cached 0 35.6s
+10:49:11 c8931cfd turn 22 prompt 23922 cached 0 32.5s
+10:49:25 ac391b7a turn 22 prompt 18964 cached 0 43.8s
+10:49:26 7ecb6e41 turn 22 prompt 23352 cached 0 43.7s
+10:49:29 a5a58471 turn 22 prompt 14495 cached 0 45.5s
+10:49:33 deb136cf turn 22 prompt 22736 cached 0 44.9s
+10:49:36 0ba0d3e5 turn 22 prompt 20535 cached 0 35.8s
+10:49:38 5f5a0316 turn 22 prompt 21777 cached 0 36.3s
+10:49:41 8985b69a turn 22 prompt 20878 cached 0 34.4s
+10:49:54 0a459d35 turn 22 prompt 23302 cached 0 43.8s
+10:49:55 021b1eaf turn 22 prompt 23174 cached 0 41.7s
+10:50:00 02f88761 turn 22 prompt 20920 cached 0 45.1s
+10:50:03 8a60a347 turn 23 prompt 17307 cached 0 35.2s
+10:50:08 9b59808a turn 23 prompt 26611 cached 0 37.5s
+10:50:11 388aa92e turn 23 prompt 25071 cached 0 36.8s
+10:50:23 89ad529c turn 23 prompt 30268 cached 0 46.1s
+10:50:28 c081b264 turn 23 prompt 29211 cached 0 43.7s
+10:50:31 b37bdd9e turn 23 prompt 24217 cached 0 34.6s
+10:50:36 43557dc7 turn 23 prompt 20457 cached 0 37.8s
+10:50:39 4ad5298d turn 23 prompt 20993 cached 0 36.9s
+10:50:52 d021a693 turn 23 prompt 27115 cached 0 46.4s
+10:50:56 ee94bf79 turn 23 prompt 24949 cached 0 47.7s
+10:50:58 c8931cfd turn 23 prompt 24050 cached 0 47.1s
+10:51:00 ac391b7a turn 23 prompt 19405 cached 0 35.3s
+10:51:03 7ecb6e41 turn 23 prompt 23623 cached 0 37.9s
+10:51:06 a5a58471 turn 23 prompt 14763 cached 0 36.6s
+10:51:20 deb136cf turn 23 prompt 23887 cached 0 46.7s
+10:51:24 0ba0d3e5 turn 23 prompt 20918 cached 0 47.9s
+10:51:26 5f5a0316 turn 23 prompt 21912 cached 0 47.8s
+10:51:29 8985b69a turn 23 prompt 21026 cached 0 47.8s
+10:51:30 0a459d35 turn 23 prompt 23787 cached 0 36.2s
+10:51:33 021b1eaf turn 23 prompt 24014 cached 0 38.2s
+10:51:48 02f88761 turn 23 prompt 21254 cached 0 47.8s
+10:51:52 8a60a347 turn 24 prompt 21765 cached 0 49.6s
+10:51:55 9b59808a turn 24 prompt 28009 cached 0 47.2s
+10:51:58 388aa92e turn 24 prompt 25884 cached 0 47.8s
+10:52:02 c081b264 turn 24 prompt 31136 cached 0 34.3s
+10:52:15 b37bdd9e turn 24 prompt 25210 cached 0 44.3s
+10:52:21 43557dc7 turn 24 prompt 20742 cached 0 44.9s
+10:52:22 4ad5298d turn 24 prompt 22077 cached 0 42.2s
+10:52:27 d021a693 turn 24 prompt 27515 cached 0 35.5s
+10:52:30 ee94bf79 turn 24 prompt 25361 cached 0 34.4s
+10:52:43 c8931cfd turn 24 prompt 24340 cached 0 44.8s
+10:52:45 ac391b7a turn 24 prompt 19757 cached 0 44.8s
+10:52:49 7ecb6e41 turn 24 prompt 28093 cached 0 45.7s
+10:52:51 a5a58471 turn 24 prompt 15005 cached 0 45.1s
+10:52:55 deb136cf turn 24 prompt 24058 cached 0 35.1s
+10:52:58 0ba0d3e5 turn 24 prompt 21487 cached 0 34.0s
+10:53:11 5f5a0316 turn 24 prompt 22075 cached 0 44.6s
+10:53:13 8985b69a turn 24 prompt 21461 cached 0 44.5s
+10:53:16 0a459d35 turn 24 prompt 24065 cached 0 45.4s
+10:53:19 021b1eaf turn 24 prompt 24327 cached 0 45.2s
+10:53:22 02f88761 turn 24 prompt 21581 cached 0 34.1s
+10:53:25 8a60a347 turn 25 prompt 22053 cached 0 32.3s
+10:53:38 9b59808a turn 25 prompt 28723 cached 0 42.6s
+10:53:43 388aa92e turn 25 prompt 26689 cached 0 44.4s
+10:53:46 b37bdd9e turn 25 prompt 26110 cached 0 30.5s
+10:53:49 43557dc7 turn 25 prompt 21260 cached 0 27.4s
+10:53:51 4ad5298d turn 25 prompt 23582 cached 0 29.6s
+10:54:05 d021a693 turn 25 prompt 29959 cached 0 38.1s
+10:54:11 ee94bf79 turn 25 prompt 25658 cached 0 41.0s
+10:54:14 c8931cfd turn 25 prompt 24640 cached 0 30.9s
+10:54:16 ac391b7a turn 25 prompt 20046 cached 0 30.9s
+10:54:19 7ecb6e41 turn 25 prompt 28566 cached 0 29.9s
+10:54:32 a5a58471 turn 25 prompt 15582 cached 0 41.5s
+10:54:35 deb136cf turn 25 prompt 25328 cached 0 40.4s
+10:54:39 0ba0d3e5 turn 25 prompt 22930 cached 0 41.5s
+10:54:42 5f5a0316 turn 25 prompt 22506 cached 0 31.2s
+10:54:42 8985b69a turn 25 prompt 21732 cached 0 29.1s
+10:54:46 0a459d35 turn 25 prompt 24348 cached 0 30.3s
+10:54:59 021b1eaf turn 25 prompt 24458 cached 0 40.8s
+10:55:02 02f88761 turn 25 prompt 21867 cached 0 40.2s
+10:55:06 8a60a347 turn 26 prompt 23084 cached 0 41.8s
+10:55:10 9b59808a turn 26 prompt 29496 cached 0 32.1s
+10:55:13 388aa92e turn 26 prompt 27045 cached 0 30.6s
+10:55:27 b37bdd9e turn 26 prompt 27624 cached 0 41.6s
+10:55:30 43557dc7 turn 26 prompt 21480 cached 0 41.1s
+10:55:34 4ad5298d turn 26 prompt 24264 cached 0 42.8s
+10:55:38 d021a693 turn 26 prompt 30229 cached 0 33.0s
+10:55:40 ee94bf79 turn 26 prompt 27145 cached 0 29.0s
+10:55:57 c8931cfd turn 26 prompt 25602 cached 0 43.0s
+10:55:59 ac391b7a turn 26 prompt 20313 cached 0 43.1s
+10:56:03 7ecb6e41 turn 26 prompt 29133 cached 0 44.4s
+10:56:08 a5a58471 turn 26 prompt 15831 cached 0 35.3s
+10:56:08 deb136cf turn 26 prompt 27539 cached 0 32.8s
+10:56:11 0ba0d3e5 turn 26 prompt 23662 cached 0 32.2s
+10:56:24 5f5a0316 turn 26 prompt 22653 cached 0 41.8s
+10:56:26 8985b69a turn 26 prompt 21920 cached 0 44.1s
+10:56:33 0a459d35 turn 26 prompt 29546 cached 0 46.7s
+10:56:37 021b1eaf turn 26 prompt 24597 cached 0 37.8s
+10:56:40 02f88761 turn 26 prompt 22223 cached 0 37.3s
+10:56:53 8a60a347 turn 27 prompt 23243 cached 0 46.9s
+10:56:57 9b59808a turn 27 prompt 30544 cached 0 46.9s
+10:57:01 388aa92e turn 27 prompt 27745 cached 0 47.9s
+10:57:05 b37bdd9e turn 27 prompt 28109 cached 0 37.8s
+10:57:08 43557dc7 turn 27 prompt 21773 cached 0 37.9s
+10:57:21 4ad5298d turn 27 prompt 25628 cached 0 47.2s
+10:57:23 ee94bf79 turn 27 prompt 27479 cached 0 43.1s
+10:57:28 c8931cfd turn 27 prompt 25953 cached 0 31.0s
+10:57:34 ac391b7a turn 27 prompt 20816 cached 0 34.5s
+10:57:34 7ecb6e41 turn 27 prompt 29972 cached 0 30.6s
+10:57:46 a5a58471 turn 27 prompt 16023 cached 0 38.1s
+10:57:50 deb136cf turn 27 prompt 28606 cached 0 41.5s
+10:57:54 0ba0d3e5 turn 27 prompt 24478 cached 0 42.4s
+10:57:56 5f5a0316 turn 27 prompt 23004 cached 0 32.7s
+10:58:00 8985b69a turn 27 prompt 22441 cached 0 33.8s
+10:58:13 0a459d35 turn 27 prompt 30081 cached 0 40.4s
+10:58:17 021b1eaf turn 27 prompt 24873 cached 0 39.6s
+10:58:20 02f88761 turn 27 prompt 22438 cached 0 40.7s
+10:58:21 8a60a347 turn 28 prompt 24409 cached 0 27.3s
+10:58:29 388aa92e turn 28 prompt 28080 cached 0 27.8s
+10:58:41 b37bdd9e turn 28 prompt 28691 cached 0 35.7s
+10:58:43 43557dc7 turn 28 prompt 22426 cached 0 35.8s
+10:58:50 4ad5298d turn 28 prompt 27100 cached 0 28.4s
+10:58:51 ee94bf79 turn 28 prompt 27740 cached 0 28.3s
+10:58:56 c8931cfd turn 28 prompt 27087 cached 0 28.4s
+10:59:07 ac391b7a turn 28 prompt 21306 cached 0 33.4s
+10:59:10 7ecb6e41 turn 28 prompt 31513 cached 0 36.0s
+10:59:15 a5a58471 turn 28 prompt 16240 cached 0 28.8s
+10:59:15 deb136cf turn 28 prompt 28911 cached 0 25.3s
+10:59:16 0ba0d3e5 turn 28 prompt 24888 cached 0 22.4s
+10:59:32 5f5a0316 turn 28 prompt 23699 cached 0 35.3s
+10:59:35 8985b69a turn 28 prompt 22632 cached 0 35.4s
+10:59:40 021b1eaf turn 28 prompt 25231 cached 0 23.3s
+10:59:42 02f88761 turn 28 prompt 22655 cached 0 21.3s
+10:59:45 8a60a347 turn 29 prompt 25841 cached 0 24.2s
+10:59:59 388aa92e turn 29 prompt 28550 cached 0 29.7s
+11:00:09 b37bdd9e turn 29 prompt 28823 cached 0 28.1s
+11:00:11 43557dc7 turn 29 prompt 23253 cached 0 27.9s
+11:00:14 4ad5298d turn 29 prompt 27866 cached 0 25.0s
+11:00:16 ee94bf79 turn 29 prompt 28000 cached 0 25.0s
+11:00:25 c8931cfd turn 29 prompt 27535 cached 0 29.0s
+11:00:31 ac391b7a turn 29 prompt 21938 cached 0 23.7s
+11:00:39 a5a58471 turn 29 prompt 16715 cached 0 24.5s
+11:00:39 deb136cf turn 29 prompt 29907 cached 0 24.4s
+11:00:40 0ba0d3e5 turn 29 prompt 25294 cached 0 23.5s
+11:00:57 5f5a0316 turn 29 prompt 23920 cached 0 25.6s
+11:00:58 8985b69a turn 29 prompt 22750 cached 0 23.0s
+11:01:04 021b1eaf turn 29 prompt 25525 cached 0 24.2s
+11:01:04 02f88761 turn 29 prompt 22861 cached 0 22.7s
+11:01:05 8a60a347 turn 30 prompt 26021 cached 0 19.8s
+11:01:25 388aa92e turn 30 prompt 29717 cached 0 25.9s
+11:01:39 b37bdd9e turn 30 prompt 29501 cached 0 29.8s
+11:01:41 43557dc7 turn 30 prompt 23579 cached 0 29.9s
+11:01:44 4ad5298d turn 30 prompt 28114 cached 0 29.1s
+11:01:48 ee94bf79 turn 30 prompt 28156 cached 0 31.1s
+11:01:54 c8931cfd turn 30 prompt 28756 cached 0 28.4s
+11:02:08 ac391b7a turn 30 prompt 22164 cached 0 37.3s
+11:02:08 a5a58471 turn 30 prompt 16863 cached 0 29.2s
+11:02:12 deb136cf turn 30 prompt 30456 cached 0 32.4s
+11:02:15 0ba0d3e5 turn 30 prompt 25605 cached 0 35.0s
+11:02:25 5f5a0316 turn 30 prompt 24370 cached 0 27.4s
+11:02:27 8985b69a turn 30 prompt 23223 cached 0 28.2s
+11:02:33 021b1eaf turn 30 prompt 26323 cached 0 29.0s
+11:02:34 02f88761 turn 30 prompt 23655 cached 0 29.2s
+11:02:34 8a60a347 turn 31 prompt 27042 cached 0 29.2s
+11:02:38 388aa92e turn 31 prompt 30080 cached 0 13.2s
+11:03:09 b37bdd9e turn 31 prompt 33383 cached 0 30.3s
+11:03:12 43557dc7 turn 31 prompt 24193 cached 0 30.5s
+11:03:14 4ad5298d turn 31 prompt 28224 cached 0 30.1s
+11:03:14 ee94bf79 turn 31 prompt 28492 cached 0 26.5s
+11:03:15 c8931cfd turn 31 prompt 29114 cached 0 21.2s
+11:03:32 ac391b7a turn 31 prompt 23084 cached 0 23.6s
+11:03:32 a5a58471 turn 31 prompt 17014 cached 0 23.6s
+11:03:35 0ba0d3e5 turn 31 prompt 26853 cached 0 19.8s
+11:03:52 5f5a0316 turn 31 prompt 24835 cached 0 26.9s
+11:03:52 8985b69a turn 31 prompt 23709 cached 0 25.2s
+11:03:55 021b1eaf turn 31 prompt 27062 cached 0 21.4s
+11:03:55 02f88761 turn 31 prompt 24170 cached 0 21.3s
+11:03:55 8a60a347 turn 32 prompt 28675 cached 0 21.2s
+11:04:40 43557dc7 turn 32 prompt 25059 cached 0 28.2s
+11:04:42 4ad5298d turn 32 prompt 28527 cached 0 28.3s
+11:04:45 ee94bf79 turn 32 prompt 29274 cached 0 31.4s
+11:04:46 c8931cfd turn 32 prompt 30733 cached 0 31.0s
+11:04:51 ac391b7a turn 32 prompt 23415 cached 0 19.0s
+11:05:04 a5a58471 turn 32 prompt 17221 cached 0 32.2s
+11:05:07 0ba0d3e5 turn 32 prompt 27313 cached 0 32.9s
+11:05:20 5f5a0316 turn 32 prompt 25136 cached 0 27.9s
+11:05:20 8985b69a turn 32 prompt 24283 cached 0 28.0s
+11:05:20 021b1eaf turn 32 prompt 27955 cached 0 25.4s
+11:05:22 02f88761 turn 32 prompt 24763 cached 0 27.6s
+11:05:23 8a60a347 turn 33 prompt 28987 cached 0 27.7s
+11:06:06 43557dc7 turn 33 prompt 25557 cached 0 26.5s
+11:06:07 4ad5298d turn 33 prompt 28813 cached 0 24.8s
+11:06:07 ee94bf79 turn 33 prompt 29409 cached 0 21.6s
+11:06:07 ac391b7a turn 33 prompt 23909 cached 0 16.5s
+11:06:18 a5a58471 turn 33 prompt 17404 cached 0 14.0s
+11:06:19 0ba0d3e5 turn 33 prompt 27923 cached 0 11.8s
+11:06:48 5f5a0316 turn 33 prompt 25874 cached 0 28.4s
+11:06:48 8985b69a turn 33 prompt 24602 cached 0 28.4s
+11:06:49 021b1eaf turn 33 prompt 28181 cached 0 28.5s
+11:06:49 02f88761 turn 33 prompt 25443 cached 0 26.3s
+11:06:49 8a60a347 turn 34 prompt 29217 cached 0 26.2s
+11:07:35 43557dc7 turn 34 prompt 31706 cached 0 28.2s
+11:07:38 4ad5298d turn 34 prompt 29045 cached 0 31.5s
+11:07:39 ee94bf79 turn 34 prompt 30610 cached 0 31.6s
+11:07:39 ac391b7a turn 34 prompt 24215 cached 0 31.5s
+11:07:39 a5a58471 turn 34 prompt 17843 cached 0 20.8s
+11:07:46 0ba0d3e5 turn 34 prompt 28308 cached 0 26.5s
+11:08:17 5f5a0316 turn 34 prompt 26030 cached 0 28.8s
+11:08:17 8985b69a turn 34 prompt 25133 cached 0 28.8s
+11:08:17 021b1eaf turn 34 prompt 28931 cached 0 28.8s
+11:08:18 02f88761 turn 34 prompt 26068 cached 0 28.8s
+11:08:18 8a60a347 turn 35 prompt 29513 cached 0 28.8s
+11:09:02 4ad5298d turn 35 prompt 29293 cached 0 23.2s
+11:09:02 ac391b7a turn 35 prompt 24771 cached 0 22.9s
+11:09:02 a5a58471 turn 35 prompt 19172 cached 0 22.9s
+11:09:02 0ba0d3e5 turn 35 prompt 28913 cached 0 16.3s
+11:09:46 5f5a0316 turn 35 prompt 26593 cached 0 29.3s
+11:09:46 8985b69a turn 35 prompt 25556 cached 0 29.3s
+11:09:47 021b1eaf turn 35 prompt 29336 cached 0 29.3s
+11:09:47 02f88761 turn 35 prompt 27250 cached 0 29.3s
+11:09:47 8a60a347 turn 36 prompt 29617 cached 0 29.3s
+11:10:26 4ad5298d turn 36 prompt 30558 cached 0 24.1s
+11:10:26 ac391b7a turn 36 prompt 24966 cached 0 24.1s
+11:10:26 a5a58471 turn 36 prompt 19905 cached 0 24.1s
+11:10:26 0ba0d3e5 turn 36 prompt 30678 cached 0 24.1s
+11:11:17 5f5a0316 turn 36 prompt 27371 cached 0 30.5s
+11:11:17 8985b69a turn 36 prompt 26103 cached 0 30.6s
+11:11:17 021b1eaf turn 36 prompt 30558 cached 0 30.6s
+11:11:17 02f88761 turn 36 prompt 27608 cached 0 30.6s
+11:11:18 8a60a347 turn 37 prompt 30332 cached 0 30.6s
+11:11:40 ac391b7a turn 37 prompt 25764 cached 0 13.8s
+11:11:40 a5a58471 turn 37 prompt 21066 cached 0 13.8s
+11:12:31 5f5a0316 turn 37 prompt 27774 cached 10048 14.9s
+11:12:32 8985b69a turn 37 prompt 26389 cached 8640 14.7s
+11:12:32 02f88761 turn 37 prompt 27871 cached 27608 14.1s
+11:12:48 ac391b7a turn 38 prompt 26042 cached 25764 8.7s
+11:12:49 a5a58471 turn 38 prompt 21462 cached 21066 8.7s
+11:13:42 5f5a0316 turn 38 prompt 28145 cached 27774 10.7s
+11:13:42 8985b69a turn 38 prompt 26924 cached 26389 10.7s
+11:13:42 02f88761 turn 38 prompt 28181 cached 27871 10.7s
+11:13:57 ac391b7a turn 39 prompt 26559 cached 26042 8.9s
+11:13:57 a5a58471 turn 39 prompt 22134 cached 21462 8.8s
+11:14:54 5f5a0316 turn 39 prompt 31384 cached 28145 11.5s
+11:14:54 02f88761 turn 39 prompt 29165 cached 28181 11.4s
+11:14:54 8985b69a turn 39 prompt 27298 cached 26924 11.4s
+11:15:06 ac391b7a turn 40 prompt 26939 cached 26559 8.9s
+11:15:06 a5a58471 turn 40 prompt 22852 cached 22134 8.9s
+11:16:03 8985b69a turn 40 prompt 27495 cached 27298 9.2s
+11:16:03 02f88761 turn 40 prompt 29549 cached 29165 9.3s
+11:16:15 ac391b7a turn 41 prompt 27107 cached 26939 8.9s
+11:16:15 a5a58471 turn 41 prompt 23059 cached 22852 8.9s
+11:17:12 8985b69a turn 41 prompt 28308 cached 27495 9.4s
+11:17:12 02f88761 turn 41 prompt 29847 cached 29549 9.4s
+11:17:24 ac391b7a turn 42 prompt 27368 cached 27107 9.0s
+11:17:24 a5a58471 turn 42 prompt 23484 cached 23059 9.0s
+11:18:22 8985b69a turn 42 prompt 28599 cached 28308 9.7s
+11:18:22 02f88761 turn 42 prompt 31797 cached 29847 9.7s
+11:18:33 ac391b7a turn 43 prompt 27638 cached 27368 9.2s
+11:18:33 a5a58471 turn 43 prompt 24724 cached 23484 9.2s
+11:19:29 8985b69a turn 43 prompt 29136 cached 28599 7.4s
+11:19:42 ac391b7a turn 44 prompt 28297 cached 27638 9.2s
+11:19:42 a5a58471 turn 44 prompt 25593 cached 24724 9.2s
+11:20:37 8985b69a turn 44 prompt 29375 cached 29136 7.4s
+11:20:52 ac391b7a turn 45 prompt 28559 cached 28297 9.4s
+11:20:52 a5a58471 turn 45 prompt 27301 cached 25593 9.4s
+11:21:44 8985b69a turn 45 prompt 29816 cached 29375 7.5s
+11:22:01 ac391b7a turn 46 prompt 29107 cached 28559 9.4s
+11:22:01 a5a58471 turn 46 prompt 27981 cached 27301 9.4s
+11:22:52 8985b69a turn 46 prompt 30247 cached 29816 7.5s
+11:23:11 ac391b7a turn 47 prompt 29228 cached 29107 9.4s
+11:23:11 a5a58471 turn 47 prompt 28883 cached 27981 9.4s
+11:24:20 ac391b7a turn 48 prompt 30010 cached 29228 9.5s
+11:24:20 a5a58471 turn 48 prompt 29171 cached 28883 9.5s
+11:25:28 a5a58471 turn 49 prompt 30146 cached 29171 7.5s
+sessions=24 turns=791 tool_delay=60.0s wall=4232s
+prompt_tokens=14870361 cached=1293629 (8.7%) recomputed_history=12838100 (86.3%)
+ttft p50=14.456s p90=29.486s
+STATS 10:15:24 {"active":20,"free_blocks":431,"idle_sessions":0,"preemptions":0,"resident":20,"steps":141,"tool_waits":{},"total_blocks":2706,"waiting":4}
+STATS 10:15:54 {"active":1,"free_blocks":0,"idle_sessions":23,"preemptions":0,"resident":12,"steps":541,"tool_waits":{},"total_blocks":2706,"waiting":0}
+STATS 10:16:24 {"active":1,"free_blocks":0,"idle_sessions":23,"preemptions":0,"resident":12,"steps":541,"tool_waits":{},"total_blocks":2706,"waiting":0}
+STATS 10:16:54 {"active":13,"free_blocks":80,"idle_sessions":10,"preemptions":2,"resident":13,"steps":812,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":17}},"total_blocks":2706,"waiting":0}
+STATS 10:17:24 {"active":1,"free_blocks":0,"idle_sessions":21,"preemptions":2,"resident":2,"steps":1068,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":17}},"total_blocks":2706,"waiting":0}
+STATS 10:17:54 {"active":11,"free_blocks":1113,"idle_sessions":10,"preemptions":2,"resident":11,"steps":1074,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":19}},"total_blocks":2706,"waiting":0}
+STATS 10:18:24 {"active":5,"free_blocks":1,"idle_sessions":15,"preemptions":3,"resident":5,"steps":1381,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":26}},"total_blocks":2706,"waiting":0}
+STATS 10:18:54 {"active":1,"free_blocks":0,"idle_sessions":19,"preemptions":3,"resident":1,"steps":1601,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":26}},"total_blocks":2706,"waiting":0}
+STATS 10:19:24 {"active":15,"free_blocks":1118,"idle_sessions":4,"preemptions":3,"resident":15,"steps":1616,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":28}},"total_blocks":2706,"waiting":4}
+STATS 10:19:54 {"active":9,"free_blocks":0,"idle_sessions":9,"preemptions":5,"resident":9,"steps":1907,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":32}},"total_blocks":2706,"waiting":0}
+STATS 10:20:24 {"active":1,"free_blocks":0,"idle_sessions":17,"preemptions":5,"resident":1,"steps":2140,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":32}},"total_blocks":2706,"waiting":0}
+STATS 10:20:54 {"active":13,"free_blocks":790,"idle_sessions":4,"preemptions":5,"resident":13,"steps":2162,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":32}},"total_blocks":2706,"waiting":2}
+STATS 10:21:24 {"active":11,"free_blocks":1,"idle_sessions":5,"preemptions":6,"resident":11,"steps":2450,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":35}},"total_blocks":2706,"waiting":0}
+STATS 10:21:54 {"active":1,"free_blocks":0,"idle_sessions":15,"preemptions":6,"resident":2,"steps":2687,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":35}},"total_blocks":2706,"waiting":0}
+STATS 10:22:24 {"active":12,"free_blocks":236,"idle_sessions":4,"preemptions":6,"resident":12,"steps":2717,"tool_waits":{"unfinished":{"p90_s":60.355647984,"samples":35}},"total_blocks":2706,"waiting":1}
+STATS 10:22:54 {"active":10,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":12,"steps":3091,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":39}},"total_blocks":2706,"waiting":2}
+STATS 10:23:24 {"active":1,"free_blocks":0,"idle_sessions":14,"preemptions":7,"resident":2,"steps":3472,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":39}},"total_blocks":2706,"waiting":0}
+STATS 10:23:54 {"active":12,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":12,"steps":3533,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":39}},"total_blocks":2706,"waiting":0}
+STATS 10:24:24 {"active":11,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":11,"steps":3872,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:24:54 {"active":1,"free_blocks":0,"idle_sessions":13,"preemptions":7,"resident":1,"steps":4232,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:25:24 {"active":11,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":11,"steps":4362,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:25:54 {"active":10,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":11,"steps":4744,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:26:24 {"active":1,"free_blocks":0,"idle_sessions":12,"preemptions":7,"resident":1,"steps":5016,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:26:54 {"active":10,"free_blocks":1,"idle_sessions":2,"preemptions":7,"resident":10,"steps":5240,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:27:24 {"active":9,"free_blocks":195,"idle_sessions":5,"preemptions":7,"resident":10,"steps":5551,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:27:54 {"active":1,"free_blocks":0,"idle_sessions":12,"preemptions":7,"resident":1,"steps":5814,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:28:24 {"active":9,"free_blocks":208,"idle_sessions":3,"preemptions":7,"resident":9,"steps":6104,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:28:54 {"active":9,"free_blocks":1,"idle_sessions":4,"preemptions":7,"resident":9,"steps":6375,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:29:24 {"active":2,"free_blocks":210,"idle_sessions":9,"preemptions":7,"resident":3,"steps":6725,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:29:54 {"active":9,"free_blocks":159,"idle_sessions":3,"preemptions":7,"resident":9,"steps":7002,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:30:24 {"active":8,"free_blocks":367,"idle_sessions":3,"preemptions":7,"resident":8,"steps":7271,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:30:54 {"active":4,"free_blocks":306,"idle_sessions":7,"preemptions":7,"resident":4,"steps":7720,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:31:24 {"active":9,"free_blocks":393,"idle_sessions":2,"preemptions":7,"resident":9,"steps":7988,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:31:54 {"active":8,"free_blocks":421,"idle_sessions":3,"preemptions":7,"resident":8,"steps":8258,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:32:24 {"active":4,"free_blocks":350,"idle_sessions":6,"preemptions":7,"resident":4,"steps":8736,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:32:54 {"active":8,"free_blocks":504,"idle_sessions":3,"preemptions":7,"resident":8,"steps":9004,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:33:24 {"active":7,"free_blocks":98,"idle_sessions":4,"preemptions":7,"resident":7,"steps":9272,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:33:54 {"active":6,"free_blocks":338,"idle_sessions":3,"preemptions":7,"resident":6,"steps":9628,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:34:24 {"active":8,"free_blocks":315,"idle_sessions":3,"preemptions":7,"resident":8,"steps":9896,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:34:54 {"active":8,"free_blocks":62,"idle_sessions":3,"preemptions":7,"resident":8,"steps":10162,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:35:24 {"active":6,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":6,"steps":10445,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:35:54 {"active":7,"free_blocks":348,"idle_sessions":2,"preemptions":7,"resident":7,"steps":10799,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:36:24 {"active":7,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":8,"steps":11116,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":4}
+STATS 10:36:54 {"active":7,"free_blocks":345,"idle_sessions":2,"preemptions":7,"resident":7,"steps":11430,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:37:24 {"active":7,"free_blocks":458,"idle_sessions":2,"preemptions":7,"resident":7,"steps":11698,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:37:54 {"active":8,"free_blocks":585,"idle_sessions":2,"preemptions":7,"resident":8,"steps":11966,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:38:24 {"active":7,"free_blocks":451,"idle_sessions":2,"preemptions":7,"resident":7,"steps":12232,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:38:54 {"active":6,"free_blocks":100,"idle_sessions":2,"preemptions":7,"resident":6,"steps":12499,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:39:24 {"active":7,"free_blocks":192,"idle_sessions":2,"preemptions":7,"resident":7,"steps":12785,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:39:54 {"active":6,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":7,"steps":13100,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:40:24 {"active":6,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":6,"steps":13394,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:40:54 {"active":7,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":7,"steps":13695,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":4}
+STATS 10:41:24 {"active":7,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":7,"steps":13986,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:41:54 {"active":6,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":6,"steps":14274,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:42:24 {"active":7,"free_blocks":440,"idle_sessions":2,"preemptions":7,"resident":7,"steps":14556,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:42:54 {"active":7,"free_blocks":216,"idle_sessions":2,"preemptions":7,"resident":7,"steps":14820,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:43:24 {"active":6,"free_blocks":260,"idle_sessions":3,"preemptions":7,"resident":6,"steps":15105,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:43:54 {"active":6,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":6,"steps":15382,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:44:24 {"active":5,"free_blocks":331,"idle_sessions":4,"preemptions":7,"resident":6,"steps":15662,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:44:54 {"active":6,"free_blocks":281,"idle_sessions":3,"preemptions":7,"resident":6,"steps":15929,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:45:24 {"active":6,"free_blocks":141,"idle_sessions":2,"preemptions":7,"resident":6,"steps":16193,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:45:54 {"active":7,"free_blocks":215,"idle_sessions":2,"preemptions":7,"resident":7,"steps":16462,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:46:24 {"active":6,"free_blocks":372,"idle_sessions":2,"preemptions":7,"resident":6,"steps":16744,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:46:54 {"active":6,"free_blocks":208,"idle_sessions":2,"preemptions":7,"resident":6,"steps":17008,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:47:24 {"active":6,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":6,"steps":17291,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:47:54 {"active":6,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":6,"steps":17603,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:48:24 {"active":5,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":5,"steps":17909,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":4}
+STATS 10:48:54 {"active":6,"free_blocks":1,"idle_sessions":2,"preemptions":7,"resident":6,"steps":18198,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":4}
+STATS 10:49:24 {"active":7,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":7,"steps":18478,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:49:54 {"active":5,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":5,"steps":18768,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:50:24 {"active":5,"free_blocks":296,"idle_sessions":2,"preemptions":7,"resident":5,"steps":19050,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:50:54 {"active":6,"free_blocks":54,"idle_sessions":2,"preemptions":7,"resident":6,"steps":19315,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:51:24 {"active":6,"free_blocks":277,"idle_sessions":2,"preemptions":7,"resident":6,"steps":19599,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:51:54 {"active":5,"free_blocks":69,"idle_sessions":2,"preemptions":7,"resident":5,"steps":19863,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:52:24 {"active":6,"free_blocks":355,"idle_sessions":2,"preemptions":7,"resident":6,"steps":20132,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:52:54 {"active":6,"free_blocks":117,"idle_sessions":2,"preemptions":7,"resident":6,"steps":20399,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:53:24 {"active":5,"free_blocks":77,"idle_sessions":3,"preemptions":7,"resident":5,"steps":20667,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:53:54 {"active":5,"free_blocks":63,"idle_sessions":2,"preemptions":7,"resident":5,"steps":20937,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:54:24 {"active":6,"free_blocks":1,"idle_sessions":2,"preemptions":7,"resident":6,"steps":21244,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:54:54 {"active":5,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":5,"steps":21563,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:55:24 {"active":5,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":5,"steps":21866,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:55:54 {"active":6,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":6,"steps":22141,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":3}
+STATS 10:56:24 {"active":5,"free_blocks":300,"idle_sessions":3,"preemptions":7,"resident":5,"steps":22448,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:56:54 {"active":5,"free_blocks":273,"idle_sessions":2,"preemptions":7,"resident":5,"steps":22710,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:57:24 {"active":5,"free_blocks":255,"idle_sessions":2,"preemptions":7,"resident":5,"steps":22981,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":2}
+STATS 10:57:54 {"active":5,"free_blocks":288,"idle_sessions":2,"preemptions":7,"resident":5,"steps":23269,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:58:24 {"active":5,"free_blocks":474,"idle_sessions":2,"preemptions":7,"resident":5,"steps":23555,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:58:54 {"active":5,"free_blocks":68,"idle_sessions":2,"preemptions":7,"resident":5,"steps":23824,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 10:59:24 {"active":5,"free_blocks":246,"idle_sessions":2,"preemptions":7,"resident":5,"steps":24159,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 10:59:54 {"active":5,"free_blocks":297,"idle_sessions":2,"preemptions":7,"resident":5,"steps":24492,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:00:24 {"active":5,"free_blocks":1,"idle_sessions":2,"preemptions":7,"resident":5,"steps":24787,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:00:54 {"active":5,"free_blocks":1,"idle_sessions":2,"preemptions":7,"resident":5,"steps":25160,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:01:24 {"active":5,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":5,"steps":25514,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:01:54 {"active":4,"free_blocks":1,"idle_sessions":3,"preemptions":7,"resident":4,"steps":25812,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:02:24 {"active":5,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":5,"steps":26135,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:02:54 {"active":5,"free_blocks":327,"idle_sessions":1,"preemptions":7,"resident":5,"steps":26446,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:03:24 {"active":3,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":3,"steps":26883,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:03:54 {"active":3,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":3,"steps":27224,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:04:24 {"active":4,"free_blocks":176,"idle_sessions":3,"preemptions":7,"resident":4,"steps":27267,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:04:54 {"active":4,"free_blocks":453,"idle_sessions":3,"preemptions":7,"resident":4,"steps":27687,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:05:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":28035,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:05:54 {"active":4,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":4,"steps":28077,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:06:24 {"active":5,"free_blocks":1445,"idle_sessions":2,"preemptions":7,"resident":5,"steps":28597,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:06:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":2,"steps":28874,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:07:24 {"active":5,"free_blocks":0,"idle_sessions":2,"preemptions":7,"resident":5,"steps":28938,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 11:07:54 {"active":4,"free_blocks":828,"idle_sessions":3,"preemptions":7,"resident":5,"steps":29413,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":1}
+STATS 11:08:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":29688,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:08:54 {"active":4,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":4,"steps":29794,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:09:24 {"active":5,"free_blocks":1139,"idle_sessions":2,"preemptions":7,"resident":5,"steps":29985,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:09:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":30257,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:10:24 {"active":4,"free_blocks":0,"idle_sessions":3,"preemptions":7,"resident":4,"steps":30495,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:10:54 {"active":5,"free_blocks":1195,"idle_sessions":2,"preemptions":7,"resident":5,"steps":30555,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:11:24 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":30828,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:11:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":31095,"tool_waits":{"unfinished":{"p90_s":60.367307924,"samples":40}},"total_blocks":2706,"waiting":0}
+STATS 11:12:24 {"active":3,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":3,"steps":31186,"tool_waits":{"unfinished":{"p90_s":60.357892318,"samples":43}},"total_blocks":2706,"waiting":0}
+STATS 11:12:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":31619,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":44}},"total_blocks":2706,"waiting":0}
+STATS 11:13:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":31619,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":44}},"total_blocks":2706,"waiting":0}
+STATS 11:13:54 {"active":2,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":2,"steps":32052,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":49}},"total_blocks":2706,"waiting":0}
+STATS 11:14:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":32137,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":49}},"total_blocks":2706,"waiting":0}
+STATS 11:14:54 {"active":2,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":2,"steps":32394,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.367307924,"samples":52}},"total_blocks":2706,"waiting":0}
+STATS 11:15:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":32651,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.367307924,"samples":54}},"total_blocks":2706,"waiting":0}
+STATS 11:15:54 {"active":2,"free_blocks":1,"idle_sessions":5,"preemptions":7,"resident":2,"steps":32673,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.367307924,"samples":56}},"total_blocks":2706,"waiting":0}
+STATS 11:16:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":33165,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.367307924,"samples":58}},"total_blocks":2706,"waiting":0}
+STATS 11:16:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":33165,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.367307924,"samples":58}},"total_blocks":2706,"waiting":0}
+STATS 11:17:24 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":33679,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":62}},"total_blocks":2706,"waiting":0}
+STATS 11:17:54 {"active":1,"free_blocks":0,"idle_sessions":6,"preemptions":7,"resident":1,"steps":33679,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":62}},"total_blocks":2706,"waiting":0}
+STATS 11:18:24 {"active":2,"free_blocks":0,"idle_sessions":4,"preemptions":7,"resident":2,"steps":33942,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:18:54 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":34193,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:19:24 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":34280,"tool_waits":{"execute_bash":{"p90_s":60.056016227,"samples":1},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:19:54 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":34706,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:20:24 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":34706,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:20:54 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":35219,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:21:24 {"active":1,"free_blocks":0,"idle_sessions":5,"preemptions":7,"resident":1,"steps":35219,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:21:54 {"active":2,"free_blocks":345,"idle_sessions":3,"preemptions":7,"resident":2,"steps":35544,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:22:24 {"active":1,"free_blocks":339,"idle_sessions":4,"preemptions":7,"resident":1,"steps":35732,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:22:54 {"active":1,"free_blocks":332,"idle_sessions":4,"preemptions":7,"resident":1,"steps":35988,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.357892318,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:23:24 {"active":1,"free_blocks":316,"idle_sessions":4,"preemptions":7,"resident":1,"steps":36245,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.355647984,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:23:55 {"active":1,"free_blocks":316,"idle_sessions":4,"preemptions":7,"resident":1,"steps":36245,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.355647984,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:24:25 {"active":1,"free_blocks":300,"idle_sessions":4,"preemptions":7,"resident":1,"steps":36502,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.355647984,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:24:55 {"active":1,"free_blocks":300,"idle_sessions":4,"preemptions":7,"resident":1,"steps":36502,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.355647984,"samples":64}},"total_blocks":2706,"waiting":0}
+STATS 11:25:25 {"active":1,"free_blocks":781,"idle_sessions":3,"preemptions":7,"resident":1,"steps":36651,"tool_waits":{"execute_bash":{"p90_s":60.153236631,"samples":2},"unfinished":{"p90_s":60.291607055,"samples":64}},"total_blocks":2706,"waiting":0}
