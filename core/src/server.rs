@@ -51,6 +51,70 @@ struct Session {
     last_used: Instant,
     /// Until then the session's KV is not evicted for other sessions (agent in a tool call).
     pinned_until: Instant,
+    /// Tool the last turn called, if it ended with a tool call.
+    last_tool: Option<String>,
+}
+
+/// How long a session stays pinned after a turn.
+#[derive(Clone, Copy, PartialEq)]
+pub enum PinPolicy {
+    /// Every turn: a fixed `pin_ttl`.
+    Fixed,
+    /// A turn the model ended without a tool call: no pin (the agent is probably done).
+    /// Otherwise (tool call, or cut off by the length limit): the learned 90th-percentile
+    /// wait for that key, x1.5 + 2 s, clamped to 1..300 s; `pin_ttl` until it has been seen.
+    Adaptive,
+}
+
+/// Observed gaps between a turn that called a tool and the session's next request,
+/// per tool name (most recent 64).
+#[derive(Default)]
+struct ToolWaits {
+    gaps: HashMap<String, VecDeque<Duration>>,
+}
+
+impl ToolWaits {
+    fn record(&mut self, tool: &str, gap: Duration) {
+        let q = self.gaps.entry(tool.to_string()).or_default();
+        if q.len() == 64 {
+            q.pop_front();
+        }
+        q.push_back(gap);
+    }
+
+    fn p90(&self, tool: &str) -> Option<Duration> {
+        let q = self.gaps.get(tool).filter(|q| !q.is_empty())?;
+        let mut v: Vec<Duration> = q.iter().copied().collect();
+        v.sort();
+        Some(v[(v.len() * 9 / 10).min(v.len() - 1)])
+    }
+
+    fn pin_for(&self, tool: &str, default: Duration) -> Duration {
+        match self.p90(tool) {
+            Some(p) => (p.mul_f64(1.5) + Duration::from_secs(2)).clamp(Duration::from_secs(1), Duration::from_secs(300)),
+            None => default,
+        }
+    }
+
+    fn to_json(&self) -> Value {
+        Value::Object(self.gaps.keys().map(|k| (k.clone(), json!({
+            "samples": self.gaps[k].len(),
+            "p90_s": self.p90(k).map(|d| d.as_secs_f64()),
+        }))).collect())
+    }
+}
+
+/// What the agent will probably wait on after this turn, as a key for learned wait times:
+/// the first tool the output calls, "unfinished" if generation hit the length limit
+/// (the agent likely continues), or None if the model ended the turn without a tool call
+/// (the agent is probably done).
+fn called_tool(tokenizer: &Tokenizer, tool_call_token: Option<u32>, output: &[u32], finish_reason: &str) -> Option<String> {
+    if tool_call_token.is_some_and(|id| output.contains(&id)) {
+        let text = tokenizer.decode(output, false).unwrap_or_default();
+        let (_, calls) = parse_tool_calls(&text);
+        return Some(calls.first().and_then(|c| c["function"]["name"].as_str()).unwrap_or("unknown").to_string());
+    }
+    (finish_reason != "stop").then(|| "unfinished".to_string())
 }
 
 fn common_prefix(a: &[u32], b: &[u32]) -> usize {
@@ -118,8 +182,11 @@ fn blocks_needed(a: &Active, block_size: usize) -> usize {
 /// 3. If running requests still cannot grow, pinned idle sessions are trimmed, then the most
 ///    recently admitted request is preempted (blocks freed, tokens kept, recomputed later).
 /// Sessions idle for longer than `session_ttl` are freed.
+#[allow(clippy::too_many_arguments)]
 fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, session_ttl: Duration, pin_ttl: Duration,
-               stats: Arc<std::sync::Mutex<Value>>) {
+               stats: Arc<std::sync::Mutex<Value>>, tokenizer: Tokenizer, pin_policy: PinPolicy) {
+    let tool_call_token = tokenizer.token_to_id("<tool_call>");
+    let mut tool_waits = ToolWaits::default();
     let mut steps: u64 = 0;
     let mut preemptions: u64 = 0;
     let bs = engine.pool.block_size;
@@ -150,7 +217,12 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
 
         for job in incoming {
             let mut seq = match job.session.as_ref().and_then(|id| sessions.remove(id)) {
-                Some(s) => s.seq,
+                Some(s) => {
+                    if let Some(tool) = &s.last_tool {
+                        tool_waits.record(tool, s.last_used.elapsed());
+                    }
+                    s.seq
+                }
                 None => Seq::default(),
             };
             // Keep the part of the session that matches the new prompt. The last prompt
@@ -252,6 +324,7 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
             "steps": steps, "preemptions": preemptions, "active": active.len(), "waiting": waiting.len(),
             "resident": resident.len(), "idle_sessions": sessions.len(),
             "free_blocks": engine.pool.free_blocks(), "total_blocks": engine.pool.num_blocks,
+            "tool_waits": tool_waits.to_json(),
         });
 
         let mut seqs: Vec<&mut Seq> = active.iter_mut().map(|a| &mut a.seq).collect();
@@ -297,7 +370,13 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
             match a.job.session.take() {
                 Some(id) => {
                     let now = Instant::now();
-                    sessions.insert(id, Session { seq: a.seq, last_used: now, pinned_until: now + pin_ttl });
+                    let last_tool = called_tool(&tokenizer, tool_call_token, &done.output, done.finish_reason);
+                    let pin = match (pin_policy, &last_tool) {
+                        (PinPolicy::Fixed, _) => pin_ttl,
+                        (PinPolicy::Adaptive, None) => Duration::ZERO,
+                        (PinPolicy::Adaptive, Some(tool)) => tool_waits.pin_for(tool, pin_ttl),
+                    };
+                    sessions.insert(id, Session { seq: a.seq, last_used: now, pinned_until: now + pin, last_tool });
                 }
                 None => engine.pool.release(&mut a.seq),
             }
@@ -501,12 +580,14 @@ fn handle(st: Arc<AppState>, mut req: tiny_http::Request) {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn serve(engine: Engine, tokenizer: Tokenizer, template: ChatTemplate, eos: Vec<u32>, model_name: String, port: u16,
-             session_ttl: Duration, pin_ttl: Duration) -> Result<()> {
+             session_ttl: Duration, pin_ttl: Duration, pin_policy: PinPolicy) -> Result<()> {
     let (tx, rx) = mpsc::channel();
     let stats = Arc::new(std::sync::Mutex::new(json!({})));
     let loop_stats = Arc::clone(&stats);
-    std::thread::spawn(move || engine_loop(engine, rx, eos, session_ttl, pin_ttl, loop_stats));
+    let loop_tokenizer = tokenizer.clone();
+    std::thread::spawn(move || engine_loop(engine, rx, eos, session_ttl, pin_ttl, loop_stats, loop_tokenizer, pin_policy));
     let state = Arc::new(AppState { jobs: std::sync::Mutex::new(tx), stats, tokenizer, template, model_name });
     let server = tiny_http::Server::http(("0.0.0.0", port)).map_err(anyhow::Error::msg)?;
     println!("listening on 0.0.0.0:{port}");

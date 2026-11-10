@@ -36,6 +36,17 @@ ours_image = client_files(
     modal.Image.from_registry("nvidia/cuda:12.9.0-devel-ubuntu22.04", add_python="3.12").entrypoint([])
 )
 
+SGLANG_IMAGE = "lmsysorg/sglang:v0.5.23-cu130"
+sglang_image = (
+    modal.Image.from_registry(SGLANG_IMAGE)
+    .entrypoint([])
+    .pip_install("httpx")
+    .add_local_file(HERE / "phase0" / "replay.py", "/bench/replay.py")
+    .add_local_file(HERE / "phase0" / "decode_bench.py", "/bench/decode_bench.py")
+    .add_local_file(HERE / "phase0" / "prefill_bench.py", "/bench/prefill_bench.py")
+    .add_local_file(HERE / "data" / "sessions_64.jsonl", "/bench/sessions.jsonl")
+)
+
 hf_cache = modal.Volume.from_name("huggingface-cache", create_if_missing=True)
 build_cache = modal.Volume.from_name("engine-build")
 # Results are also written here, so they survive a dropped local client.
@@ -131,6 +142,24 @@ def bench_vllm(concurrency: int, tool_delay: float, mode: str = "replay", name: 
         server.terminate()
 
 
+@app.function(image=sglang_image, gpu="L40S", timeout=3 * 60 * MINUTES,
+              volumes={"/root/.cache/huggingface": hf_cache, "/results": results})
+def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name: str = "") -> dict:
+    # Flags checked against sglang v0.5.23 source (arg_groups/fields/*.py, function_call_parser.py).
+    # --max-total-tokens matches the KV pool to vLLM's 173,200 tokens on L40S.
+    server = subprocess.Popen([
+        "python3", "-m", "sglang.launch_server", "--model-path", MODEL, "--revision", MODEL_REVISION,
+        "--served-model-name", "llm", "--host", "127.0.0.1", "--port", str(PORT),
+        "--context-length", "32768", "--max-total-tokens", "173200",
+        "--enable-cache-report", "--tool-call-parser", "qwen",
+    ])
+    try:
+        wait_healthy(f"http://127.0.0.1:{PORT}/health")
+        return run_mode(mode, concurrency, tool_delay, send_session=False, name=name)
+    finally:
+        server.terminate()
+
+
 @app.function(image=ours_image, gpu="L40S", timeout=3 * 60 * MINUTES,
               volumes={"/root/.cache/huggingface": hf_cache, "/cache": build_cache, "/results": results})
 def bench_ours(concurrency: int, tool_delay: float, mode: str = "replay", env_flags: str = "", name: str = "") -> dict:
@@ -147,10 +176,23 @@ def bench_ours(concurrency: int, tool_delay: float, mode: str = "replay", env_fl
 
 @app.local_entrypoint()
 def main(engine: str = "ours", concurrency: int = 24, tool_delay: float = 5.0, mode: str = "replay",
-         env_flags: str = "", tag: str = ""):
+         env_flags: str = "", tag: str = "", spawn: bool = False):
     name = result_name(engine, mode, concurrency, tool_delay, tag)
+    if spawn:
+        # Hand the run to Modal and return: nothing depends on this local process afterwards.
+        # Use with `modal run --detach`; results land in volume `engine-results` as <name>.txt/.csv.
+        if engine == "vllm":
+            bench_vllm.spawn(concurrency, tool_delay, mode, name)
+        elif engine == "sglang":
+            bench_sglang.spawn(concurrency, tool_delay, mode, name)
+        else:
+            bench_ours.spawn(concurrency, tool_delay, mode, env_flags, name)
+        print(f"spawned {name}")
+        return
     if engine == "vllm":
         result = bench_vllm.remote(concurrency, tool_delay, mode, name)
+    elif engine == "sglang":
+        result = bench_sglang.remote(concurrency, tool_delay, mode, name)
     else:
         result = bench_ours.remote(concurrency, tool_delay, mode, env_flags, name)
     stem = HERE / "data" / "m3" / name

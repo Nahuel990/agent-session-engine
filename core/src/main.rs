@@ -95,8 +95,13 @@ fn main() -> Result<()> {
             serde_json::Value::Array(v) => v.iter().filter_map(|x| x.as_u64()).map(|x| x as u32).collect(),
             v => v.as_u64().map(|x| vec![x as u32]).unwrap_or_default(),
         };
+        let policy = match std::env::var("ENGINE_PIN_POLICY").as_deref() {
+            Ok("adaptive") => server::PinPolicy::Adaptive,
+            _ => server::PinPolicy::Fixed,
+        };
+        eprintln!("pin policy: {}", if policy == server::PinPolicy::Adaptive { "adaptive" } else { "fixed" });
         return server::serve(engine, tok, template, eos, "llm".into(), port,
-            std::time::Duration::from_secs(ttl), std::time::Duration::from_secs(pin));
+            std::time::Duration::from_secs(ttl), std::time::Duration::from_secs(pin), policy);
     }
 
     let model_id = args.get(1).cloned().unwrap_or_else(|| "Qwen/Qwen3-0.6B".into());
