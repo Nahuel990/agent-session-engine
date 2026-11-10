@@ -64,6 +64,30 @@ pub enum PinPolicy {
     /// Otherwise (tool call, or cut off by the length limit): the learned 90th-percentile
     /// wait for that key, x1.5 + 2 s, clamped to 1..300 s; `pin_ttl` until it has been seen.
     Adaptive,
+    /// Cost-aware: pin only if the learned wait is no longer than the time to recompute a
+    /// full cache (capacity tokens / prefill tokens per second), and only while idle pinned
+    /// sessions hold at most `ENGINE_PIN_CAP` (default 0.5) of the KV pool. Returning
+    /// sessions that still have KV skip the new-session admission gate.
+    Capped,
+}
+
+/// Pin limits for `PinPolicy::Capped`, from ENGINE_PREFILL_TOK_PER_S (default 10000, the
+/// measured prefill rate of Qwen3-8B on L40S) and ENGINE_PIN_CAP (default 0.5).
+struct PinCap {
+    max_wait: Duration,
+    max_pinned_blocks: usize,
+}
+
+impl PinCap {
+    fn from_env(total_blocks: usize, block_size: usize) -> Self {
+        let env = |k: &str, d: f64| std::env::var(k).ok().and_then(|v| v.parse().ok()).unwrap_or(d);
+        let rate = env("ENGINE_PREFILL_TOK_PER_S", 10_000.0);
+        let cap = env("ENGINE_PIN_CAP", 0.5);
+        Self {
+            max_wait: Duration::from_secs_f64((total_blocks * block_size) as f64 / rate),
+            max_pinned_blocks: (total_blocks as f64 * cap) as usize,
+        }
+    }
 }
 
 /// Observed gaps between a turn that called a tool and the session's next request,
@@ -187,6 +211,10 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
                stats: Arc<std::sync::Mutex<Value>>, tokenizer: Tokenizer, pin_policy: PinPolicy) {
     let tool_call_token = tokenizer.token_to_id("<tool_call>");
     let mut tool_waits = ToolWaits::default();
+    let pin_cap = PinCap::from_env(engine.pool.num_blocks, engine.pool.block_size);
+    if pin_policy == PinPolicy::Capped {
+        eprintln!("capped pins: max wait {:.1}s, max pinned blocks {}", pin_cap.max_wait.as_secs_f64(), pin_cap.max_pinned_blocks);
+    }
     let mut steps: u64 = 0;
     let mut preemptions: u64 = 0;
     let bs = engine.pool.block_size;
@@ -220,6 +248,11 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
                 Some(s) => {
                     if let Some(tool) = &s.last_tool {
                         tool_waits.record(tool, s.last_used.elapsed());
+                    }
+                    // Capped policy: a returning session that still holds KV is admitted
+                    // like a resident one instead of queueing as a new session.
+                    if pin_policy == PinPolicy::Capped && !s.seq.blocks.is_empty() {
+                        resident.insert(job.session.clone().unwrap());
                     }
                     s.seq
                 }
@@ -373,8 +406,18 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
                     let last_tool = called_tool(&tokenizer, tool_call_token, &done.output, done.finish_reason);
                     let pin = match (pin_policy, &last_tool) {
                         (PinPolicy::Fixed, _) => pin_ttl,
-                        (PinPolicy::Adaptive, None) => Duration::ZERO,
+                        (PinPolicy::Adaptive | PinPolicy::Capped, None) => Duration::ZERO,
                         (PinPolicy::Adaptive, Some(tool)) => tool_waits.pin_for(tool, pin_ttl),
+                        (PinPolicy::Capped, Some(tool)) => {
+                            // Unknown tool: assume the longest wait worth pinning for.
+                            let expected = tool_waits.p90(tool).unwrap_or(pin_cap.max_wait);
+                            let pinned_idle: usize = sessions.values().filter(|s| s.pinned_until > now).map(|s| s.seq.blocks.len()).sum();
+                            if expected <= pin_cap.max_wait && pinned_idle + a.seq.blocks.len() <= pin_cap.max_pinned_blocks {
+                                tool_waits.pin_for(tool, pin_cap.max_wait)
+                            } else {
+                                Duration::ZERO
+                            }
+                        }
                     };
                     sessions.insert(id, Session { seq: a.seq, last_used: now, pinned_until: now + pin, last_tool });
                 }

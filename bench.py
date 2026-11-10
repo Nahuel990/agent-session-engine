@@ -118,12 +118,28 @@ def result_name(engine: str, mode: str, concurrency: int, tool_delay: float, tag
 
 
 def replay(concurrency: int, tool_delay: float, send_session: bool) -> dict:
+    import threading
+
     out = "/tmp/out.csv"
     cmd = ["python", "/bench/replay.py", f"http://127.0.0.1:{PORT}", "/bench/sessions.jsonl",
            str(concurrency), str(tool_delay), out] + (["session"] if send_session else [])
+    # Sample our engine's scheduler state every 30 s (other servers have no /stats; ignored).
+    samples, done = [], threading.Event()
+
+    def poll():
+        while not done.wait(30):
+            try:
+                samples.append(f"STATS {time.strftime('%H:%M:%S')} " + urllib.request.urlopen(
+                    f"http://127.0.0.1:{PORT}/stats", timeout=10).read().decode())
+            except Exception:
+                pass
+
+    poller = threading.Thread(target=poll, daemon=True)
+    poller.start()
     proc = subprocess.run(cmd, capture_output=True, text=True)
+    done.set()
     csv = Path(out).read_text() if Path(out).exists() else ""
-    return {"csv": csv, "log": proc.stdout + proc.stderr}
+    return {"csv": csv, "log": proc.stdout + proc.stderr + "\n".join(samples) + "\n"}
 
 
 @app.function(image=vllm_image, gpu="L40S", timeout=3 * 60 * MINUTES,

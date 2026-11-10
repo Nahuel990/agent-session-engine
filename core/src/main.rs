@@ -95,11 +95,12 @@ fn main() -> Result<()> {
             serde_json::Value::Array(v) => v.iter().filter_map(|x| x.as_u64()).map(|x| x as u32).collect(),
             v => v.as_u64().map(|x| vec![x as u32]).unwrap_or_default(),
         };
-        let policy = match std::env::var("ENGINE_PIN_POLICY").as_deref() {
-            Ok("adaptive") => server::PinPolicy::Adaptive,
-            _ => server::PinPolicy::Fixed,
+        let (policy, name) = match std::env::var("ENGINE_PIN_POLICY").as_deref() {
+            Ok("adaptive") => (server::PinPolicy::Adaptive, "adaptive"),
+            Ok("capped") => (server::PinPolicy::Capped, "capped"),
+            _ => (server::PinPolicy::Fixed, "fixed"),
         };
-        eprintln!("pin policy: {}", if policy == server::PinPolicy::Adaptive { "adaptive" } else { "fixed" });
+        eprintln!("pin policy: {name}");
         return server::serve(engine, tok, template, eos, "llm".into(), port,
             std::time::Duration::from_secs(ttl), std::time::Duration::from_secs(pin), policy);
     }
