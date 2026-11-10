@@ -172,7 +172,9 @@ def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name
     server = subprocess.Popen([
         "python3", "-m", "sglang.launch_server", "--model-path", MODEL, "--revision", MODEL_REVISION,
         "--served-model-name", "llm", "--host", "127.0.0.1", "--port", str(PORT),
-        "--context-length", "32768", "--max-total-tokens", "173200",
+        # 0.92 matches vLLM's gpu_memory_utilization; with SGLang's default (0.843 here) it
+        # only fit 158,237 KV tokens instead of 173,200.
+        "--context-length", "32768", "--max-total-tokens", "173200", "--mem-fraction-static", "0.92",
         "--enable-cache-report", "--tool-call-parser", "qwen",
     ] + extra_args.split("|") * bool(extra_args), env=dict(__import__("os").environ, HF_HOME="/hf"))
     try:
