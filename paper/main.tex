@@ -29,7 +29,7 @@ We ask a narrower question: against the prefix caches of current engines (vLLM 0
 
 Contributions:
 \begin{itemize}
-  \item An open-source serving engine in Rust with per-session KV retention, cross-session prefix sharing, session-level admission and three pinning policies, checked against vLLM and an FP32 reference (Sections~\ref{sec:design},~\ref{sec:impl}). Its mechanisms follow prior work; we do not claim them as new.
+  \item An open-source serving engine in Rust (\url{https://github.com/Nahuel990/agent-session-engine}) with per-session KV retention, cross-session prefix sharing, session-level admission and three pinning policies, checked against vLLM and an FP32 reference (Sections~\ref{sec:design},~\ref{sec:impl}). Its mechanisms follow prior work; we do not claim them as new.
   \item A replay benchmark of 24 real agent sessions with matched KV cache size across engines, run inside the server container to avoid network effects, with repeat runs and pass/fail criteria written down before seeing results (Section~\ref{sec:method}).
   \item Measurements against current engines: a 1.13x end-to-end gain over the best baseline and about 5x faster time to first token with 5-second tool waits, and parity with 60-second waits (Section~\ref{sec:results}).
   \item Negative results for three pinning policies, consistent with reports that more retention does not necessarily improve serving~\cite{choijoshi,agentservesim} (Section~\ref{sec:negative}).
@@ -177,7 +177,7 @@ Table~\ref{tab:negative} lists every memory policy we measured.
 
 \section{Conclusion}
 
-Against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23, keeping agent sessions in GPU memory still helps when agents come back within a few seconds: 1.13x faster end to end than the best baseline and about 5x faster to first token on real coding-agent traces. When agents are away for a minute the advantage disappears, as prior work on retention trade-offs predicts, and none of our three pinning policies beat the established caches; sharing common prefixes across sessions was what brought our engine back to parity. Testing realistic, sub-second and heavy-tailed tool times and stronger baselines with CPU offload are the next steps. The code, data and the scripts that produce every number in this paper are available under the MIT license.
+Against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23, keeping agent sessions in GPU memory still helps when agents come back within a few seconds: 1.13x faster end to end than the best baseline and about 5x faster to first token on real coding-agent traces. When agents are away for a minute the advantage disappears, as prior work on retention trade-offs predicts, and none of our three pinning policies beat the established caches; sharing common prefixes across sessions was what brought our engine back to parity. Testing realistic, sub-second and heavy-tailed tool times and stronger baselines with CPU offload are the next steps. The code, data and the scripts that produce every number in this paper are available under the MIT license at \url{https://github.com/Nahuel990/agent-session-engine}.
 
 \begin{thebibliography}{99}
 \bibitem{vllm} W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. E. Gonzalez, H. Zhang, I. Stoica. Efficient Memory Management for Large Language Model Serving with PagedAttention. SOSP 2023. arXiv:2309.06180.

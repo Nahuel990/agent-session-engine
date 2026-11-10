@@ -2,7 +2,7 @@
 
 An LLM inference engine written from scratch in Rust, built for AI agents: programs that call the model, run a tool, and call the model again with a longer history. It keeps each agent's session in GPU memory between turns, shares common prompt parts (system prompt, tool definitions) across agents, and serves an OpenAI-compatible API.
 
-Status: research prototype. One model (Qwen3-8B), one GPU type (NVIDIA L40S), greedy decoding.
+Paper: [paper/main.pdf](paper/main.pdf). Status: research prototype. One model (Qwen3-8B), one GPU type (NVIDIA L40S), greedy decoding.
 
 ## Results
 
