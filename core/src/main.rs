@@ -2,6 +2,7 @@ mod chat;
 mod engine;
 mod kv;
 mod model;
+mod prof;
 mod server;
 
 use anyhow::Result;

@@ -10,6 +10,7 @@ use candle_core::{DType, Device, Tensor};
 
 use crate::kv::{KvPool, Seq};
 use crate::model::Qwen3;
+use crate::prof;
 
 pub struct Engine {
     pub model: Qwen3,
@@ -172,7 +173,8 @@ impl Engine {
         let input_ids = Tensor::from_vec(input_ids, n, dev)?;
         let positions = Tensor::from_vec(positions, n, dev)?;
         let last_rows = Tensor::from_vec(last_rows, b, dev)?;
-        let logits = self.model.forward(&input_ids, &positions, &self.pool.caches, meta, &last_rows)?;
+        prof::count("tokens", n as u64);
+        let logits = prof::time(dev, "forward_total", || self.model.forward(&input_ids, &positions, &self.pool.caches, meta, &last_rows))?;
         // Greedy pick on the GPU; on an exact tie take the lowest token id, like vLLM /
         // torch.argmax. Only the chosen ids are copied to the host.
         let vocab = logits.dim(1)?;

@@ -73,8 +73,22 @@ def prefill_speed(cases=((1, 3000), (8, 3000), (1, 12000), (4, 12000))) -> dict:
     return {"csv": "", "log": log}
 
 
+def profile_prefill(cases=((1, 12000), (4, 12000))) -> dict:
+    """Needs the server started with ENGINE_PROFILE=1. Logs per-section GPU time per case."""
+    log = ""
+    urllib.request.urlopen(f"http://127.0.0.1:{PORT}/profile", timeout=30).read()  # reset after warm-up
+    for n, words in cases:
+        proc = subprocess.run(["python", "/bench/prefill_bench.py", f"http://127.0.0.1:{PORT}", str(n), str(words)],
+                              capture_output=True, text=True)
+        prof = urllib.request.urlopen(f"http://127.0.0.1:{PORT}/profile", timeout=30).read().decode()
+        log += proc.stdout + proc.stderr[-2000:] + f"PROFILE {n}x{words} {prof}\n"
+    return {"csv": "", "log": log}
+
+
 def run_mode(mode: str, concurrency: int, tool_delay: float, send_session: bool, name: str = "") -> dict:
-    if mode == "decode":
+    if mode == "profile":
+        out = profile_prefill()
+    elif mode == "decode":
         out = decode_speed()
     elif mode == "prefill":
         out = prefill_speed()
@@ -88,7 +102,7 @@ def run_mode(mode: str, concurrency: int, tool_delay: float, send_session: bool,
 
 
 def result_name(engine: str, mode: str, concurrency: int, tool_delay: float, tag: str) -> str:
-    name = f"{mode}_{engine}" if mode in ("decode", "prefill") else f"local_{engine}_c{concurrency}_d{tool_delay:g}"
+    name = f"{mode}_{engine}" if mode in ("decode", "prefill", "profile") else f"local_{engine}_c{concurrency}_d{tool_delay:g}"
     return name + (f"_{tag}" if tag else "")
 
 

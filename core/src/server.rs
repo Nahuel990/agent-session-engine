@@ -461,6 +461,7 @@ fn handle(st: Arc<AppState>, mut req: tiny_http::Request) {
     let path = req.url().split('?').next().unwrap_or("").to_string();
     match (req.method().as_str(), path.as_str()) {
         ("GET", "/health") => respond(req, 200, "\"ok\"".into()),
+        ("GET", "/profile") => respond(req, 200, crate::prof::take().to_string()),
         ("GET", "/stats") => {
             let body = st.stats.lock().unwrap().to_string();
             respond(req, 200, body)
