@@ -162,8 +162,10 @@ def bench_vllm(concurrency: int, tool_delay: float, mode: str = "replay", name: 
         server.terminate()
 
 
+# The SGLang image already has files under /root/.cache/huggingface, where Modal cannot mount
+# a volume, so the model cache is mounted at /hf and passed through HF_HOME.
 @app.function(image=sglang_image, gpu="L40S", timeout=3 * 60 * MINUTES,
-              volumes={"/root/.cache/huggingface": hf_cache, "/results": results})
+              volumes={"/hf": hf_cache, "/results": results})
 def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name: str = "", extra_args: str = "") -> dict:
     # Flags checked against sglang v0.5.23 source (arg_groups/fields/*.py, function_call_parser.py).
     # --max-total-tokens matches the KV pool to vLLM's 173,200 tokens on L40S.
@@ -172,7 +174,7 @@ def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name
         "--served-model-name", "llm", "--host", "127.0.0.1", "--port", str(PORT),
         "--context-length", "32768", "--max-total-tokens", "173200",
         "--enable-cache-report", "--tool-call-parser", "qwen",
-    ] + extra_args.split("|") * bool(extra_args))
+    ] + extra_args.split("|") * bool(extra_args), env=dict(__import__("os").environ, HF_HOME="/hf"))
     try:
         wait_healthy(f"http://127.0.0.1:{PORT}/health")
         return run_mode(mode, concurrency, tool_delay, send_session=False, name=name)
