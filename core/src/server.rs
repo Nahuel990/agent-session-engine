@@ -244,9 +244,10 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
                     if let Some(tool) = &s.last_tool {
                         tool_waits.record(tool, s.last_used.elapsed());
                     }
-                    // Capped policy: a returning session that still holds KV is admitted
-                    // like a resident one instead of queueing as a new session.
-                    if pin_policy == PinPolicy::Capped && !s.seq.blocks.is_empty() {
+                    // Capped policy: a returning session is admitted like a resident one
+                    // instead of queueing as a new session, even if its blocks were released
+                    // to the shared cache (it can still find them there by prefix match).
+                    if pin_policy == PinPolicy::Capped {
                         resident.insert(job.session.clone().unwrap());
                     }
                     s.seq
