@@ -2,3 +2,4 @@ core/target/
 data/trajectories.parquet
 __pycache__/
 paper/preview/
+paper/*.zip
