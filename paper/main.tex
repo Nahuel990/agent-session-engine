@@ -42,7 +42,7 @@ Contributions:
 
 \paragraph{Keeping KV across tool calls.} InferCept~\cite{infercept} chooses, per paused request, to preserve, discard or swap its KV by comparing the memory it would hold over the pause with the cost of recomputing it, and notes that no single strategy is universally applicable. Continuum~\cite{continuum} pins KV with a time-to-live chosen from the reload cost, the expected queueing delay and the learned distribution of each tool's duration, and orders waiting requests by their program's arrival time; its evaluation traces have mean tool times of 0.9 and 1.9 seconds. TokenCake~\cite{tokencake} offloads idle KV during function calls using per-function duration forecasts and a benefit gate; Astraea~\cite{astraea} picks preserve, discard or swap by memory pressure with per-API-category latency estimates. Choi and Joshi~\cite{choijoshi} price retention as GPU opportunity cost for waits of minutes to hours and report that enforced residency reduced goodput by 41\%; MORI~\cite{mori} moves the most idle programs out of GPU memory and calls per-call duration prediction unreliable, as does a study that has tools report their own progress~\cite{asktool}. A simulator of agent serving~\cite{agentservesim} finds that time-to-live retention under first-come-first-served scheduling changes job completion time by +0.4\%. Norgren~\cite{stateful} keeps a persistent KV cache per session with LRU eviction of conversation tails and reports 2.1 to 4.2x lower per-turn latency than vLLM and SGLang on short synthetic workflows on one L40S, from processing only new tokens plus speculative decoding.
 
-\paragraph{Multi-turn conversation caching.} Pensieve~\cite{pensieve} keeps conversation KV in GPU and CPU memory and evicts by recompute cost per unit of idle time; with longer user think times its throughput falls and its gap to vLLM narrows. CachedAttention~\cite{cachedattention} saves session KV to host memory and disk. EfficientAgent~\cite{efficientagent} argues that while one agent waits for its tool, the server processes all other agents' contexts, so reuse depends on the reusable context of the whole agent pool fitting in memory. A production trace study~\cite{kvcachewild} measures reuse times; RR-Evict~\cite{rrevict} and Penelope~\cite{penelope} propose eviction policies for idle agents in SGLang that outperform LRU.
+\paragraph{Multi-turn conversation caching.} Pensieve~\cite{pensieve} keeps conversation KV in GPU and CPU memory and evicts by recompute cost per unit of idle time; with longer user think times its throughput falls and its gap to vLLM narrows. CachedAttention~\cite{cachedattention} saves session KV to host memory and disk. EfficientAgent~\cite{efficientagent} argues that while one agent waits for its tool, the server processes all other agents' contexts, so reuse depends on the reusable context of the whole agent pool fitting in memory. A production trace study~\cite{kvcachewild} measures reuse times; RR-Evict~\cite{rrevict} and Fan et al.~\cite{penelope} propose eviction policies for idle agents in SGLang that outperform LRU.
 
 \paragraph{Session admission.} Autellix~\cite{autellix} schedules agent programs by the service they have received. ThunderAgent~\cite{thunderagent} pauses programs when it detects thrashing. CacheWise~\cite{cachewise} admits resident sessions first and reports higher tail latency because it defers new requests. Two studies of prefix-cache collapse under load~\cite{cachetrap,insidetrap} show that a session cap or admission budget preserves reuse.
 
@@ -185,25 +185,25 @@ Against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23, keeping agen
 \bibitem{tlru} W. Zhang, Y. Li, C. C. Moallemi, T. Peng. Tail-Optimized Caching for LLM Inference. arXiv:2510.15152, 2025.
 \bibitem{continuum} H. Li, R. He, Q. Mang, Q. Zhang, H. Mao, X. Chen, H. Zhou, H. Zhang, A. Cheung, J. Gonzalez, I. Stoica. Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live. arXiv:2511.02230.
 \bibitem{stateful} V. Norgren. Stateful Inference for Low-Latency Multi-Agent Tool Calling. arXiv:2605.26289, 2026.
-\bibitem{infercept} InferCept. arXiv:2402.01869, 2024.
-\bibitem{pensieve} Pensieve. EuroSys 2025. arXiv:2312.05516.
-\bibitem{cachedattention} CachedAttention. USENIX ATC 2024. arXiv:2403.19708.
-\bibitem{tokencake} TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications. arXiv:2510.18586.
-\bibitem{astraea} Astraea: A State-Aware Scheduling Engine for LLM-Powered Agents. arXiv:2512.14142, 2025.
+\bibitem{infercept} R. Abhyankar, Z. He, V. Srivatsa, H. Zhang, Y. Zhang. InferCept: Efficient Intercept Support for Augmented Large Language Model Inference. arXiv:2402.01869, 2024.
+\bibitem{pensieve} L. Yu, J. Lin, J. Li. Stateful Large Language Model Serving with Pensieve. EuroSys 2025. arXiv:2312.05516.
+\bibitem{cachedattention} B. Gao, Z. He, P. Sharma, Q. Kang, D. Jevdjic, J. Deng, et al. Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention. USENIX ATC 2024. arXiv:2403.19708.
+\bibitem{tokencake} Z. Bian, F. Wu, Z. Li, T. Ma, Y. Zhuo. TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications. arXiv:2510.18586, 2025.
+\bibitem{astraea} H. Ni, J. Zhang, G. Li, Z. Wang, R. Wu, C. Zhang, et al. Astraea: A State-Aware Scheduling Engine for LLM-Powered Agents. arXiv:2512.14142, 2025.
 \bibitem{choijoshi} M. Choi, A. Joshi. Adaptive KV Retention for LLM Agents at Human-Approval Timescales. arXiv:2608.30830, 2026.
-\bibitem{mori} MORI. arXiv:2606.00866, 2026.
-\bibitem{asktool} Ask the Tool, Don't Guess. arXiv:2609.18849, 2026.
+\bibitem{mori} T. Xia, H. Li, Z. Li, X. Chen, H. Kang, Y. Qiao, et al. Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI. arXiv:2606.00866, 2026.
+\bibitem{asktool} Y. Liu, Y. Zhang, F. Li, H. Zhang. Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It. arXiv:2609.18849, 2026.
 \bibitem{agentservesim} AgentServeSim: Serving-System Simulation and Policy Search for LLM Agent Programs. arXiv:2606.09613, 2026.
-\bibitem{efficientagent} EfficientAgent. arXiv:2609.33762, 2026.
-\bibitem{kvcachewild} KVCache Cache in the Wild. USENIX ATC 2025. arXiv:2506.02634.
-\bibitem{rrevict} RR-Evict. arXiv:2609.32278, 2026.
-\bibitem{penelope} Penelope. arXiv:2611.00391, 2026.
-\bibitem{autellix} Autellix. arXiv:2502.13965, 2025.
-\bibitem{thunderagent} ThunderAgent. arXiv:2602.13692, 2026.
-\bibitem{cachewise} CacheWise. arXiv:2606.16824, 2026.
-\bibitem{cachetrap} When Cache Pressure Becomes a Trap. arXiv:2611.02543, 2026.
-\bibitem{insidetrap} Inside the Trap. arXiv:2611.08902, 2026.
-\bibitem{workloadchar} Agentic AI Workload Characteristics. arXiv:2605.26297, 2026.
+\bibitem{efficientagent} K. Shao, J. Chen, J. Yu, X.-H. Li, C. Tao, Y. Wang, et al. EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents? arXiv:2609.33762, 2026.
+\bibitem{kvcachewild} J. Wang, J. Han, X. Wei, S. Shen, D. Zhang, C. Fang, et al. KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider. USENIX ATC 2025. arXiv:2506.02634.
+\bibitem{rrevict} Z. Pan, C. Wu, Z. Hu, X. Qiang, Z. Yu, Y. Ding. RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving. arXiv:2609.32278, 2026.
+\bibitem{penelope} J. Fan, H. Meng, Y. Xia, H. M. Chen, D. Li, D. S. Nikolopoulos. Rethinking KV Cache Eviction for Agentic LLM Serving. arXiv:2611.00391, 2026.
+\bibitem{autellix} M. Luo, X. Shi, C. Cai, T. Zhang, J. Wong, Y. Wang, et al. Autellix: An Efficient Serving Engine for LLM Agents as General Programs. arXiv:2502.13965, 2025.
+\bibitem{thunderagent} H. Kang, Z. Li, W. Xu, X. Yang, Y. Chen, J. Wang, et al. ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System. arXiv:2602.13692, 2026.
+\bibitem{cachewise} S. Tiwari, T. Chugh, N. Rickert, S. Peter, R. Mahajan, H. Shen. CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents. arXiv:2606.16824, 2026.
+\bibitem{cachetrap} C. Lu, B. Zhou, Y. Lin, D. Ustiugov. When Cache Pressure Becomes a Trap: Metastability in Agent Serving. arXiv:2611.02543, 2026.
+\bibitem{insidetrap} A. Valse, A. Jannesari. Inside the Trap: A Renewal Law for Prefix-Cache Collapse in LLM Agent Serving. arXiv:2611.08902, 2026.
+\bibitem{workloadchar} Y. Yuan, A. Nayak, S. Kundu, N. Talati. Agentic AI Workload Characteristics. arXiv:2605.26297, 2026.
 \bibitem{candle} Hugging Face. candle: a minimalist ML framework for Rust. \url{https://github.com/huggingface/candle}; fork used: \url{https://github.com/guoqingbao/candle}.
 \bibitem{attentionrs} G. Bao. attention.rs. \url{https://github.com/guoqingbao/attention.rs}.
 \bibitem{flashinfer} FlashInfer: Kernel Library for LLM Serving. \url{https://github.com/flashinfer-ai/flashinfer}.
