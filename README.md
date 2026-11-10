@@ -52,7 +52,7 @@ These were tried, measured against pass/fail criteria written down before the ru
 | Fixed 30 s pin of each session after a turn | 1.3x slower than vLLM at 60 s tool waits: the pin expires before the agent returns |
 | Pin length learned per tool name | 1.6x slower than vLLM at 60 s: idle pinned sessions block new ones |
 | Pin only when worth it, capped at 50% of memory | 3-4% slower than vLLM at 60 s |
-| Prefix sharing, first version | Slower than vLLM at 5 s, due to a scheduling bug, fixed in the next commit (1c92959) |
+| Prefix sharing, first version | Slower than vLLM at 5 s, due to a scheduling bug, fixed in the next commit (3a64258) |
 | attention-rs fused RMSNorm | Faster, but further from an FP32 reference (one top-token change in 64 steps). Not used. |
 
 ## How it works
