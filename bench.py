@@ -164,7 +164,7 @@ def bench_vllm(concurrency: int, tool_delay: float, mode: str = "replay", name: 
 
 @app.function(image=sglang_image, gpu="L40S", timeout=3 * 60 * MINUTES,
               volumes={"/root/.cache/huggingface": hf_cache, "/results": results})
-def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name: str = "") -> dict:
+def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name: str = "", extra_args: str = "") -> dict:
     # Flags checked against sglang v0.5.23 source (arg_groups/fields/*.py, function_call_parser.py).
     # --max-total-tokens matches the KV pool to vLLM's 173,200 tokens on L40S.
     server = subprocess.Popen([
@@ -172,7 +172,7 @@ def bench_sglang(concurrency: int, tool_delay: float, mode: str = "replay", name
         "--served-model-name", "llm", "--host", "127.0.0.1", "--port", str(PORT),
         "--context-length", "32768", "--max-total-tokens", "173200",
         "--enable-cache-report", "--tool-call-parser", "qwen",
-    ])
+    ] + extra_args.split("|") * bool(extra_args))
     try:
         wait_healthy(f"http://127.0.0.1:{PORT}/health")
         return run_mode(mode, concurrency, tool_delay, send_session=False, name=name)
@@ -196,7 +196,7 @@ def bench_ours(concurrency: int, tool_delay: float, mode: str = "replay", env_fl
 
 @app.local_entrypoint()
 def main(engine: str = "ours", concurrency: int = 24, tool_delay: float = 5.0, mode: str = "replay",
-         env_flags: str = "", tag: str = "", spawn: bool = False):
+         env_flags: str = "", tag: str = "", spawn: bool = False, sglang_args: str = ""):
     name = result_name(engine, mode, concurrency, tool_delay, tag)
     if spawn:
         # Hand the run to Modal and return: nothing depends on this local process afterwards.
@@ -204,7 +204,7 @@ def main(engine: str = "ours", concurrency: int = 24, tool_delay: float = 5.0, m
         if engine == "vllm":
             bench_vllm.spawn(concurrency, tool_delay, mode, name)
         elif engine == "sglang":
-            bench_sglang.spawn(concurrency, tool_delay, mode, name)
+            bench_sglang.spawn(concurrency, tool_delay, mode, name, sglang_args)
         else:
             bench_ours.spawn(concurrency, tool_delay, mode, env_flags, name)
         print(f"spawned {name}")
@@ -212,7 +212,7 @@ def main(engine: str = "ours", concurrency: int = 24, tool_delay: float = 5.0, m
     if engine == "vllm":
         result = bench_vllm.remote(concurrency, tool_delay, mode, name)
     elif engine == "sglang":
-        result = bench_sglang.remote(concurrency, tool_delay, mode, name)
+        result = bench_sglang.remote(concurrency, tool_delay, mode, name, sglang_args)
     else:
         result = bench_ours.remote(concurrency, tool_delay, mode, env_flags, name)
     stem = HERE / "data" / "m3" / name
