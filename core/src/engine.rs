@@ -193,6 +193,7 @@ impl Engine {
         for (&i, &tok) in work.iter().zip(&picks) {
             let seq = &mut seqs[i];
             seq.cached += take[i];
+            self.pool.register(seq);
             if seq.cached == seq.tokens.len() {
                 seq.tokens.push(tok);
                 next[i] = Some(tok);

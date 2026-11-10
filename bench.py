@@ -25,6 +25,7 @@ client_files = lambda img: (
     .add_local_file(HERE / "phase0" / "replay.py", "/bench/replay.py")
     .add_local_file(HERE / "phase0" / "decode_bench.py", "/bench/decode_bench.py")
     .add_local_file(HERE / "phase0" / "prefill_bench.py", "/bench/prefill_bench.py")
+    .add_local_file(HERE / "phase0" / "share_check.py", "/bench/share_check.py")
     .add_local_file(HERE / "data" / "sessions_64.jsonl", "/bench/sessions.jsonl")
 )
 vllm_image = client_files(
@@ -97,7 +98,10 @@ def profile_prefill(cases=((1, 12000), (4, 12000))) -> dict:
 
 
 def run_mode(mode: str, concurrency: int, tool_delay: float, send_session: bool, name: str = "") -> dict:
-    if mode == "profile":
+    if mode == "sharecheck":
+        proc = subprocess.run(["python", "/bench/share_check.py", f"http://127.0.0.1:{PORT}"], capture_output=True, text=True)
+        out = {"csv": "", "log": proc.stdout + proc.stderr[-2000:]}
+    elif mode == "profile":
         out = profile_prefill()
     elif mode == "decode":
         out = decode_speed()
@@ -113,7 +117,7 @@ def run_mode(mode: str, concurrency: int, tool_delay: float, send_session: bool,
 
 
 def result_name(engine: str, mode: str, concurrency: int, tool_delay: float, tag: str) -> str:
-    name = f"{mode}_{engine}" if mode in ("decode", "prefill", "profile") else f"local_{engine}_c{concurrency}_d{tool_delay:g}"
+    name = f"{mode}_{engine}" if mode in ("decode", "prefill", "profile", "sharecheck") else f"local_{engine}_c{concurrency}_d{tool_delay:g}"
     return name + (f"_{tag}" if tag else "")
 
 

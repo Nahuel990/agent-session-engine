@@ -162,29 +162,24 @@ const GROWTH: f64 = 1.2;
 /// Returns true if `need` blocks are free afterwards.
 fn free_up(engine: &mut Engine, sessions: &mut HashMap<String, Session>, resident: &mut HashSet<String>,
            need: usize, include_pinned: bool) -> bool {
-    let bs = engine.pool.block_size;
     let now = Instant::now();
     let mut order: Vec<(Instant, String)> = sessions
         .iter()
-        .filter(|(_, s)| include_pinned || s.pinned_until <= now)
+        .filter(|(_, s)| !s.seq.blocks.is_empty() && (include_pinned || s.pinned_until <= now))
         .map(|(k, s)| (s.last_used, k.clone()))
         .collect();
     order.sort();
     for (_, id) in order {
-        let free = engine.pool.free_blocks();
-        if free >= need {
+        if engine.pool.free_blocks() >= need {
             break;
         }
-        let deficit = need - free;
+        // Dropping the session's references moves its indexed blocks to the shared LRU:
+        // they stay reusable (by this session or any other with the same prefix) until
+        // the space is actually handed out.
         let s = sessions.get_mut(&id).unwrap();
-        if s.seq.blocks.len() <= deficit {
-            let mut s = sessions.remove(&id).unwrap();
-            engine.pool.release(&mut s.seq);
-            resident.remove(&id);
-        } else {
-            let keep_len = ((s.seq.blocks.len() - deficit) * bs).min(s.seq.tokens.len());
-            engine.pool.truncate(&mut s.seq, keep_len);
-        }
+        engine.pool.release(&mut s.seq);
+        s.seq.tokens.clear();
+        resident.remove(&id);
     }
     engine.pool.free_blocks() >= need
 }
@@ -261,16 +256,33 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
             // Keep the part of the session that matches the new prompt. The last prompt
             // token is always recomputed so the step has something to produce logits from.
             let keep = common_prefix(&seq.tokens, &job.prompt).min(seq.cached).min(job.prompt.len() - 1);
-            engine.pool.truncate(&mut seq, keep);
+            let mut keep = engine.pool.truncate(&mut seq, keep);
+            // A longer match may be in the shared cache (same system prompt and tools as other
+            // sessions, or this session's own released blocks): take it if it is longer.
+            let shared = engine.pool.match_prefix(&job.prompt[..job.prompt.len() - 1]);
+            if shared.cached > keep {
+                engine.pool.release(&mut seq);
+                seq = shared;
+                keep = seq.cached;
+            } else {
+                let mut shared = shared;
+                engine.pool.release(&mut shared);
+            }
+            seq.tokens.truncate(keep);
             seq.tokens.extend_from_slice(&job.prompt[keep..]);
             waiting.push_back(Active { cached_tokens: keep, seq, output: Vec::new(), job });
         }
 
-        // A session stops being resident once its pin expires (its agent took too long).
+        // A session stops being resident once its pin expires (its agent took too long), and
+        // its blocks go to the shared cache: reusable until evicted, but no longer reserved.
         let now = Instant::now();
-        for (id, sess) in sessions.iter() {
+        for (id, sess) in sessions.iter_mut() {
             if sess.pinned_until <= now {
                 resident.remove(id);
+                if !sess.seq.blocks.is_empty() {
+                    engine.pool.release(&mut sess.seq);
+                    sess.seq.tokens.clear();
+                }
             }
         }
         // Blocks the resident sessions are expected to need: current length plus growth margin.
@@ -356,7 +368,8 @@ fn engine_loop(mut engine: Engine, jobs: mpsc::Receiver<Job>, eos: Vec<u32>, ses
         *stats.lock().unwrap() = json!({
             "steps": steps, "preemptions": preemptions, "active": active.len(), "waiting": waiting.len(),
             "resident": resident.len(), "idle_sessions": sessions.len(),
-            "free_blocks": engine.pool.free_blocks(), "total_blocks": engine.pool.num_blocks,
+            "free_blocks": engine.pool.free_blocks(), "cached_idle_blocks": engine.pool.cached_idle_blocks(),
+            "total_blocks": engine.pool.num_blocks,
             "tool_waits": tool_waits.to_json(),
         });
 

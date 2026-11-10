@@ -1,0 +1,17 @@
+{
+ "pass": true,
+ "checks": {
+  "B on empty cache had no reuse": true,
+  "A reused the shared system prompt": true,
+  "A repeat reused at least as much": true,
+  "A repeat output identical": true,
+  "B with shared prefix output identical to empty-cache B": true
+ },
+ "cached": {
+  "b_fresh": 0,
+  "a1": 960,
+  "a2": 960,
+  "b_shared": 960
+ },
+ "prompt_tokens": 990
+}
