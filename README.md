@@ -6,31 +6,31 @@ Paper: [paper/main.pdf](paper/main.pdf). Status: research prototype. One model (
 
 ## Results
 
-24 real coding-agent sessions from [nebius/SWE-rebench-openhands-trajectories](https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories) (791 turns, up to 30,000 prompt tokens per session) replayed against each engine. Each turn generates 256 tokens, then the agent waits a fixed time standing in for a tool call. Same model, same GPU, same KV cache size (173,200 tokens) for every engine. Two runs per configuration.
+24 real coding-agent sessions from [nebius/SWE-rebench-openhands-trajectories](https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories) (791 turns, up to 30,000 prompt tokens per session) replayed against each engine. Each turn generates 256 tokens, then the agent waits a fixed time standing in for a tool call: 0.5 s (close to the median measured for coding agents), 5 s or 60 s. Same model, same GPU, same KV cache size (173,200 tokens) for every engine. Two runs per configuration.
 
 **Total time for all 24 sessions (lower is better):**
 
-| | Tool wait 5 s | Tool wait 60 s |
-|---|---|---|
-| vLLM 0.33.0 | 2342 / 2333 s | 4106 / 4128 s |
-| SGLang 0.5.23, LRU eviction | 2179 / 2154 s | 4069 / 4154 s |
-| SGLang 0.5.23, TLRU eviction | 2121 / 2152 s | 4078 / 4093 s |
-| **This engine** | **1868 / 1908 s** | **4083 / 4011 s** |
-| This engine vs best baseline | **1.13x faster** | 1.01x (no real difference) |
-| This engine vs vLLM | **1.24x faster** | 1.02x (no real difference) |
+| | Tool wait 0.5 s | Tool wait 5 s | Tool wait 60 s |
+|---|---|---|---|
+| vLLM 0.33.0 | 2264 / 2222 s | 2342 / 2333 s | 4106 / 4128 s |
+| SGLang 0.5.23, LRU eviction | 2013 / 2048 s | 2179 / 2154 s | 4069 / 4154 s |
+| SGLang 0.5.23, TLRU eviction | 2067 / 2024 s | 2121 / 2152 s | 4078 / 4093 s |
+| **This engine** | **1506 / 1586 s** | **1868 / 1908 s** | **4083 / 4011 s** |
+| This engine vs best baseline | **1.31x faster** | **1.13x faster** | 1.01x (no real difference) |
+| This engine vs vLLM | **1.45x faster** | **1.24x faster** | 1.02x (no real difference) |
 
 **Time to first token, median / 90th percentile (lower is better):**
 
-| | Tool wait 5 s | Tool wait 60 s |
-|---|---|---|
-| vLLM 0.33.0 | 26.8, 24.9 s / 43.2, 43.6 s | 3.5, 3.8 s / 16.6, 17.0 s |
-| SGLang 0.5.23, LRU | 29.2, 29.4 s / 44.0, 46.8 s | 6.1, 7.1 s / 18.4, 19.4 s |
-| SGLang 0.5.23, TLRU | 29.3, 25.3 s / 45.8, 44.9 s | 6.3, 6.4 s / 18.1, 18.8 s |
-| **This engine** | **5.1, 6.3 s / 26.0, 28.8 s** | 13.8, 11.5 s / 23.0, 21.1 s |
+| | Tool wait 0.5 s | Tool wait 5 s | Tool wait 60 s |
+|---|---|---|---|
+| vLLM 0.33.0 | 28.6, 28.8 s / 50.2, 48.0 s | 26.8, 24.9 s / 43.2, 43.6 s | 3.5, 3.8 s / 16.6, 17.0 s |
+| SGLang 0.5.23, LRU | 35.0, 35.9 s / 51.0, 51.5 s | 29.2, 29.4 s / 44.0, 46.8 s | 6.1, 7.1 s / 18.4, 19.4 s |
+| SGLang 0.5.23, TLRU | 36.3, 36.0 s / 53.4, 50.6 s | 29.3, 25.3 s / 45.8, 44.9 s | 6.3, 6.4 s / 18.1, 18.8 s |
+| **This engine** | **4.5, 6.8 s / 9.9, 25.5 s** | **5.1, 6.3 s / 26.0, 28.8 s** | 13.8, 11.5 s / 23.0, 21.1 s |
 
 What this shows:
 
-- When agents return quickly (5 s tool calls), keeping their sessions in memory pays off: 1.13x faster in total than the best baseline and about 5x faster to first token.
+- When agents return quickly, keeping their sessions in memory pays off: with 0.5 s tool calls, 1.31x faster in total than the best baseline (1.45x vs vLLM); with 5 s, 1.13x. About 5x faster to first token at both.
 - When agents are away longer (60 s), all engines finish within about 2% of each other, and this engine is slower to first token.
 - Raw speed is still behind: generating tokens is 15-21% slower per token than vLLM (25.1 / 27.8 / 29.7 ms vs 21.8 / 23.5 / 24.6 ms at 1 / 8 / 24 concurrent requests), and processing several long prompts at once is slower too.
 
@@ -38,8 +38,8 @@ Regenerate these tables from the raw results with `python summarize.py`.
 
 ### Limitations
 
-- One model, one GPU, one load level (24 concurrent sessions), two tool-wait values.
-- Tool time is a fixed wait. The dataset does not record real tool durations.
+- One model, one GPU, one load level (24 concurrent sessions), three tool-wait values.
+- Tool time is a fixed wait, not a mix of short and long waits. The dataset does not record real tool durations.
 - vLLM and SGLang reject prompts over 32,768 tokens; this engine does not enforce that limit, so it processed 2-3 extra turns of one session. Its numbers include that extra work.
 - The engine's own runs vary by up to 7.7% between identical runs (vLLM 0.5%), so differences of a few percent are not meaningful.
 

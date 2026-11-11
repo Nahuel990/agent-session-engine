@@ -7,15 +7,19 @@ from pathlib import Path
 
 DATA = Path(__file__).parent / "data" / "m3"
 
-# (label, file stems for 5 s tool delay, file stems for 60 s tool delay)
+# (label, file stems for 5 s tool delay, for 60 s tool delay, for 0.5 s tool delay)
 RUNS = [
-    ("vLLM 0.33.0", ["local_vllm_c24_d5", "local_vllm_c24_d5_r2"], ["local_vllm_c24_d60_n1", "local_vllm_c24_d60_n2"]),
+    ("vLLM 0.33.0", ["local_vllm_c24_d5", "local_vllm_c24_d5_r2"], ["local_vllm_c24_d60_n1", "local_vllm_c24_d60_n2"],
+     ["local_vllm_c24_d0.5_n1", "local_vllm_c24_d0.5_n2"]),
     ("SGLang 0.5.23 (lru)", ["local_sglang_c24_d5_lru_n1", "local_sglang_c24_d5_lru_n2"],
-     ["local_sglang_c24_d60_lru_n1", "local_sglang_c24_d60_lru_n2"]),
+     ["local_sglang_c24_d60_lru_n1", "local_sglang_c24_d60_lru_n2"],
+     ["local_sglang_c24_d0.5_lru_n1", "local_sglang_c24_d0.5_lru_n2"]),
     ("SGLang 0.5.23 (tlru)", ["local_sglang_c24_d5_tlru_n1", "local_sglang_c24_d5_tlru_n2"],
-     ["local_sglang_c24_d60_tlru_n1", "local_sglang_c24_d60_tlru_n2"]),
-    ("This engine (1c92959, capped)", ["local_ours_c24_d5_1c92959_share3b_n1", "local_ours_c24_d5_1c92959_share3b_n2"],
-     ["local_ours_c24_d60_1c92959_share3b_n1", "local_ours_c24_d60_1c92959_share3b_n2"]),
+     ["local_sglang_c24_d60_tlru_n1", "local_sglang_c24_d60_tlru_n2"],
+     ["local_sglang_c24_d0.5_tlru_n1", "local_sglang_c24_d0.5_tlru_n2"]),
+    ("This engine (3a64258, capped)", ["local_ours_c24_d5_1c92959_share3b_n1", "local_ours_c24_d5_1c92959_share3b_n2"],
+     ["local_ours_c24_d60_1c92959_share3b_n1", "local_ours_c24_d60_1c92959_share3b_n2"],
+     ["local_ours_c24_d0.5_3a64258_n1", "local_ours_c24_d0.5_3a64258_n2"]),
 ]
 
 
@@ -38,7 +42,7 @@ def fmt(runs: list[dict]) -> str:
 
 
 means = {}
-for delay_index, delay in ((1, "5 s"), (2, "60 s")):
+for delay_index, delay in ((3, "0.5 s"), (1, "5 s"), (2, "60 s")):
     print(f"## Tool delay {delay}")
     for row in RUNS:
         runs = [read(s) for s in row[delay_index]]

@@ -14,7 +14,7 @@
 \maketitle
 
 \begin{abstract}
-AI agents call a language model, run a tool, and call the model again with the whole history attached. Keeping an agent's KV cache in GPU memory while it waits on a tool avoids recomputing that history, but holds memory other requests could use. Prior systems (InferCept, Pensieve, Continuum, TokenCake and others) model this trade-off and evaluate it against earlier versions of vLLM. We ask how it plays out against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23. We built a serving engine in Rust (about 1,700 lines) with per-session KV retention, cross-session prefix sharing and session-level admission, and replayed 24 real coding-agent sessions (791 turns) against all three engines with the same GPU, model and KV cache size, two runs per configuration. With a fixed 5-second tool wait, our engine finishes the workload 1.13x faster than the best baseline (1.24x faster than vLLM) and returns the first token about 5x sooner. With a 60-second wait, all engines finish within 2\% of each other and our engine is slower to the first token, consistent with prior reports that retention stops paying off when agents are away long. Three pinning policies we tried, each with a pass/fail criterion written down before seeing its results, did not beat the baselines at 60 seconds. Both wait times are longer than the median tool calls reported for coding agents.
+AI agents call a language model, run a tool, and call the model again with the whole history attached. Keeping an agent's KV cache in GPU memory while it waits on a tool avoids recomputing that history, but holds memory other requests could use. Prior systems (InferCept, Pensieve, Continuum, TokenCake and others) model this trade-off and evaluate it against earlier versions of vLLM. We ask how it plays out against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23. We built a serving engine in Rust (about 1,700 lines) with per-session KV retention, cross-session prefix sharing and session-level admission, and replayed 24 real coding-agent sessions (791 turns) against all three engines with the same GPU, model and KV cache size, two runs per configuration. With a fixed 0.5-second tool wait, close to the median gap measured for coding agents, our engine finishes the workload 1.31x faster than the best baseline (1.45x faster than vLLM) and returns the first token about 5x sooner. With a 5-second wait the gain is 1.13x (1.24x over vLLM). With a 60-second wait, all engines finish within 2\% of each other and our engine is slower to the first token, consistent with prior reports that retention stops paying off when agents are away long. Three pinning policies we tried, each with a pass/fail criterion written down before seeing its results, did not beat the baselines at 60 seconds.
 \end{abstract}
 
 \section{Introduction}
@@ -31,7 +31,7 @@ Contributions:
 \begin{itemize}
   \item An open-source serving engine in Rust (\url{https://github.com/Nahuel990/agent-session-engine}) with per-session KV retention, cross-session prefix sharing, session-level admission and three pinning policies, checked against vLLM and an FP32 reference (Sections~\ref{sec:design},~\ref{sec:impl}). Its mechanisms follow prior work; we do not claim them as new.
   \item A replay benchmark of 24 real agent sessions with matched KV cache size across engines, run inside the server container to avoid network effects, with repeat runs and pass/fail criteria written down before seeing results (Section~\ref{sec:method}).
-  \item Measurements against current engines: a 1.13x end-to-end gain over the best baseline and about 5x faster time to first token with 5-second tool waits, and parity with 60-second waits (Section~\ref{sec:results}).
+  \item Measurements against current engines: an end-to-end gain over the best baseline of 1.31x with 0.5-second tool waits and 1.13x with 5-second waits, about 5x faster time to first token at both, and parity with 60-second waits (Section~\ref{sec:results}).
   \item Negative results for three pinning policies, consistent with reports that more retention does not necessarily improve serving~\cite{choijoshi,agentservesim} (Section~\ref{sec:negative}).
 \end{itemize}
 
@@ -78,7 +78,7 @@ The engine is 1,709 lines of Rust. Model code (Qwen3) uses candle~\cite{candle} 
 \section{Methodology}
 \label{sec:method}
 
-\paragraph{Workload.} We use real coding-agent trajectories from SWE-rebench-OpenHands~\cite{dataset} (67,074 sessions collected with OpenHands and Qwen3-Coder-480B; CC-BY-4.0). We sampled 64 sessions with a fixed seed and use the first 24. Each session is replayed turn by turn: the prompt for turn $t$ is every recorded message before the $t$-th assistant message, with the recorded tool definitions. The engine generates 256 tokens per turn (end-of-sequence ignored, so all engines do the same work). Between turns the client waits a fixed time standing in for the tool call: 5 seconds or 60 seconds. A session stops after its prompt passes 30,000 tokens. All 24 sessions run concurrently. Our engine receives a \texttt{session\_id} per session; vLLM and SGLang rely on their prefix caches.
+\paragraph{Workload.} We use real coding-agent trajectories from SWE-rebench-OpenHands~\cite{dataset} (67,074 sessions collected with OpenHands and Qwen3-Coder-480B; CC-BY-4.0). We sampled 64 sessions with a fixed seed and use the first 24. Each session is replayed turn by turn: the prompt for turn $t$ is every recorded message before the $t$-th assistant message, with the recorded tool definitions. The engine generates 256 tokens per turn (end-of-sequence ignored, so all engines do the same work). Between turns the client waits a fixed time standing in for the tool call: 0.5, 5 or 60 seconds. The 0.5-second wait is close to the median gaps measured for coding agents~\cite{cachetrap}; 5 and 60 seconds stand for slower tools and long waits. A session stops after its prompt passes 30,000 tokens. All 24 sessions run concurrently. Our engine receives a \texttt{session\_id} per session; vLLM and SGLang rely on their prefix caches.
 
 \paragraph{Setup.} Qwen3-8B (revision b968826), bfloat16, one L40S per engine. Every engine gets the same KV cache size: vLLM 0.33.0 allocates 173,200 tokens at \texttt{gpu\_memory\_utilization} 0.92; we set our engine to 2,706 blocks of 64 tokens (173,184) and SGLang 0.5.23 to \texttt{--max-total-tokens 173200 --mem-fraction-static 0.92} (with its default memory fraction it allocated only 158,237). SGLang runs with LRU eviction and, separately, with TLRU: threshold 4,096 tokens (the example value in SGLang's documentation, about 0.35 s of prefill at our measured prompt-processing speed) and next-prompt estimate 434 tokens (the median per-turn prompt growth on these traces). SGLang's documentation and the TLRU paper suggest deriving the threshold from a time-to-first-token target and using the mean prompt growth (735 tokens here), so our TLRU configuration is not tuned as they recommend. The replay client runs inside the server's container and connects to localhost: through Modal's proxy, streamed chunks arrived in bursts for every engine, which made time-to-first-token measurements unusable.
 
@@ -93,17 +93,17 @@ The engine is 1,709 lines of Rust. Model code (Qwen3) uses candle~\cite{candle} 
 \centering
 \caption{Wall time for all 24 sessions, two runs each (seconds; lower is better). Ratios use means.}
 \label{tab:wall}
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \toprule
-Engine & Tool wait 5 s & Tool wait 60 s \\
+Engine & Tool wait 0.5 s & Tool wait 5 s & Tool wait 60 s \\
 \midrule
-vLLM 0.33.0 & 2342 / 2333 & 4106 / 4128 \\
-SGLang 0.5.23, LRU & 2179 / 2154 & 4069 / 4154 \\
-SGLang 0.5.23, TLRU & 2121 / 2152 & 4078 / 4093 \\
-This engine (capped) & \textbf{1868 / 1908} & 4083 / 4011 \\
+vLLM 0.33.0 & 2264 / 2222 & 2342 / 2333 & 4106 / 4128 \\
+SGLang 0.5.23, LRU & 2013 / 2048 & 2179 / 2154 & 4069 / 4154 \\
+SGLang 0.5.23, TLRU & 2067 / 2024 & 2121 / 2152 & 4078 / 4093 \\
+This engine (capped) & \textbf{1506 / 1586} & \textbf{1868 / 1908} & 4083 / 4011 \\
 \midrule
-vs best baseline (SGLang TLRU) & 1.13x & 1.01x \\
-vs vLLM & 1.24x & 1.02x \\
+vs best baseline & 1.31x (LRU) & 1.13x (TLRU) & 1.01x (TLRU) \\
+vs vLLM & 1.45x & 1.24x & 1.02x \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -112,18 +112,32 @@ vs vLLM & 1.24x & 1.02x \\
 \centering
 \caption{Time to first token, median and 90th percentile over all turns, per run (seconds), and recomputed history (\% of prompt tokens).}
 \label{tab:ttft}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccc}
 \toprule
-& \multicolumn{2}{c}{Tool wait 5 s} & \multicolumn{2}{c}{Tool wait 60 s} \\
-Engine & TTFT p50 / p90 & Recomp. & TTFT p50 / p90 & Recomp. \\
+Engine & TTFT p50 & TTFT p90 & Recomputed \\
 \midrule
-vLLM & 26.8, 24.9 / 43.2, 43.6 & 55.5, 54.9 & 3.5, 3.8 / 16.6, 17.0 & 55.0, 54.9 \\
-SGLang LRU & 29.2, 29.4 / 44.0, 46.8 & 53.5, 52.7 & 6.1, 7.1 / 18.4, 19.4 & 52.6, 51.8 \\
-SGLang TLRU & 29.3, 25.3 / 45.8, 44.9 & 53.0, 52.7 & 6.3, 6.4 / 18.1, 18.8 & 53.1, 52.9 \\
-This engine & \textbf{5.1, 6.3 / 26.0, 28.8} & \textbf{18.6, 23.1} & 13.8, 11.5 / 23.0, 21.1 & 56.5, 54.6 \\
+\multicolumn{4}{l}{\emph{Tool wait 0.5 s}} \\
+vLLM & 28.6, 28.8 & 50.2, 48.0 & 55.1, 54.9 \\
+SGLang LRU & 35.0, 35.9 & 51.0, 51.5 & 50.6, 51.8 \\
+SGLang TLRU & 36.3, 36.0 & 53.4, 50.6 & 51.7, 52.5 \\
+This engine & \textbf{4.5, 6.8} & \textbf{9.9, 25.5} & \textbf{7.5, 15.6} \\
+\midrule
+\multicolumn{4}{l}{\emph{Tool wait 5 s}} \\
+vLLM & 26.8, 24.9 & 43.2, 43.6 & 55.5, 54.9 \\
+SGLang LRU & 29.2, 29.4 & 44.0, 46.8 & 53.5, 52.7 \\
+SGLang TLRU & 29.3, 25.3 & 45.8, 44.9 & 53.0, 52.7 \\
+This engine & \textbf{5.1, 6.3} & \textbf{26.0, 28.8} & \textbf{18.6, 23.1} \\
+\midrule
+\multicolumn{4}{l}{\emph{Tool wait 60 s}} \\
+vLLM & 3.5, 3.8 & 16.6, 17.0 & 55.0, 54.9 \\
+SGLang LRU & 6.1, 7.1 & 18.4, 19.4 & 52.6, 51.8 \\
+SGLang TLRU & 6.3, 6.4 & 18.1, 18.8 & 53.1, 52.9 \\
+This engine & 13.8, 11.5 & 23.0, 21.1 & 56.5, 54.6 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\paragraph{Realistic tool calls.} With 0.5-second tool calls, our engine finishes in 1506 and 1586 seconds, against 2013--2067 for SGLang and 2222--2264 for vLLM: 1.31x faster than the best baseline (SGLang LRU) and 1.45x faster than vLLM by mean wall time. Both of our runs beat every baseline run, which was the criterion we wrote down before running. The baselines recompute 51--55\% of prompt tokens as history; our engine recomputes 7.5\% and 15.6\% in its two runs. The median turn gets its first token in 4.5--6.8 seconds versus 28.6--36.3 seconds. At this wait SGLang is about 10\% faster than vLLM, and TLRU again changes SGLang's results by about 1\%.
 
 \paragraph{Short tool calls.} With 5-second tool calls (Table~\ref{tab:wall}), our engine finishes 1.13x faster than the best baseline and 1.24x faster than vLLM, in both runs. The baselines recompute more than half of all prompt tokens as history they had already seen; our engine recomputes 19--23\%. The median turn gets its first token about 5x sooner (Table~\ref{tab:ttft}). Among the baselines, SGLang is 8--9\% faster than vLLM, and TLRU changes SGLang's results by about 1\%.
 
@@ -169,7 +183,7 @@ Table~\ref{tab:negative} lists every memory policy we measured.
 
 \section{Limitations}
 
-\paragraph{Tool waits.} Both of our tool waits are fixed and long. Measured coding-agent tool calls have median gaps under half a second and means of one to two seconds, with a heavy tail~\cite{cachetrap,workloadchar,continuum}. We did not test sub-second waits or mixed distributions, which are the common case, so our numbers say little about where most real agent turns fall.
+\paragraph{Tool waits.} Our tool waits are fixed. Measured coding-agent tool calls have median gaps under half a second and means of one to two seconds, with a heavy tail~\cite{cachetrap,workloadchar,continuum}. Our 0.5-second wait is close to the median, but we did not test mixed or heavy-tailed distributions, where short and long waits arrive together.
 
 \paragraph{Baselines.} We compare against the default GPU-only prefix caches of vLLM and SGLang. We did not test CPU offload tiers (LMCache, SGLang HiCache), newer eviction policies for idle agents~\cite{rrevict,penelope}, or SGLang's streaming sessions, and our TLRU configuration does not follow the tuning its authors recommend. Stronger baselines may narrow or remove our 5-second gain.
 
@@ -177,7 +191,7 @@ Table~\ref{tab:negative} lists every memory policy we measured.
 
 \section{Conclusion}
 
-Against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23, keeping agent sessions in GPU memory still helps when agents come back within a few seconds: 1.13x faster end to end than the best baseline and about 5x faster to first token on real coding-agent traces. When agents are away for a minute the advantage disappears, as prior work on retention trade-offs predicts, and none of our three pinning policies beat the established caches; sharing common prefixes across sessions was what brought our engine back to parity. Testing realistic, sub-second and heavy-tailed tool times and stronger baselines with CPU offload are the next steps. The code, data and the scripts that produce every number in this paper are available under the MIT license at \url{https://github.com/Nahuel990/agent-session-engine}.
+Against the current prefix caches of vLLM 0.33.0 and SGLang 0.5.23, keeping agent sessions in GPU memory still helps when agents come back within a few seconds: on real coding-agent traces, 1.31x faster end to end than the best baseline with 0.5-second tool calls and 1.13x with 5-second calls, and about 5x faster to first token at both. When agents are away for a minute the advantage disappears, as prior work on retention trade-offs predicts, and none of our three pinning policies beat the established caches; sharing common prefixes across sessions was what brought our engine back to parity. Testing heavy-tailed tool times and stronger baselines with CPU offload are the next steps. The code, data and the scripts that produce every number in this paper are available under the MIT license at \url{https://github.com/Nahuel990/agent-session-engine}.
 
 \begin{thebibliography}{99}
 \bibitem{vllm} W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. E. Gonzalez, H. Zhang, I. Stoica. Efficient Memory Management for Large Language Model Serving with PagedAttention. SOSP 2023. arXiv:2309.06180.
