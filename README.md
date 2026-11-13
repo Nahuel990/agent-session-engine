@@ -2,7 +2,7 @@
 
 An LLM inference engine written from scratch in Rust, built for AI agents: programs that call the model, run a tool, and call the model again with a longer history. It keeps each agent's session in GPU memory between turns, shares common prompt parts (system prompt, tool definitions) across agents, and serves an OpenAI-compatible API.
 
-Paper: [paper/main.pdf](paper/main.pdf). Status: research prototype. One model (Qwen3-8B), one GPU type (NVIDIA L40S), greedy decoding.
+Paper: [Preprints.org, doi:10.20944/preprints202611.1388.v1](https://doi.org/10.20944/preprints202611.1388.v1) (PDF also in [paper/main.pdf](paper/main.pdf)). Status: research prototype. One model (Qwen3-8B), one GPU type (NVIDIA L40S), greedy decoding.
 
 ## Results
 
@@ -97,6 +97,19 @@ python summarize.py
 ```
 
 The sampled sessions are in `data/sessions_64.jsonl`. To resample, download the dataset's `trajectories.parquet` into `data/` and run `python phase0/sample.py 64`.
+
+## Citation
+
+```bibtex
+@misc{nucera2026agentsessions,
+  title     = {When Does Keeping Agent Sessions in GPU Memory Pay Off? A Rust Serving Engine and a Replay Study on Real Agent Traces},
+  author    = {Nucera, Nahuel Alejandro},
+  year      = {2026},
+  publisher = {Preprints.org},
+  doi       = {10.20944/preprints202611.1388.v1},
+  url       = {https://doi.org/10.20944/preprints202611.1388.v1}
+}
+```
 
 ## Credits and licenses
 
